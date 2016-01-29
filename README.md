@@ -1,5 +1,5 @@
 ## Learn Vue Easy
 ```
-npm install
-webpack
+* `npm install`
+* `webpack`
 ```
