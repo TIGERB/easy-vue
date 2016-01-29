@@ -1,0 +1,25 @@
+{
+  "name": "easy-vue",
+  "description": "Learn Vue Easy",
+  "main": "index.html",
+  "authors": [
+    "tigerb <624661874@qq.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "vue"
+  ],
+  "homepage": "https://github.com/TIGERB/easy-vue",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ratchet": "^2.0.2",
+    "font-awesome": "^4.5.0"
+  }
+}

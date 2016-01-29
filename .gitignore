@@ -1,4 +1,5 @@
 .DS_Store
-node_modules/
-dist/
+node_modules
+bower_components
+dist
 npm-debug.log
