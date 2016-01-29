@@ -1,8 +1,8 @@
 
 var webpack          = require('webpack');
-var wecpackConfig    = module.exports = {};//　初始化对象
+var wecpackConfig    = module.exports = {};//　init object
 
-// 入口
+// input
 wecpackConfig.entry　 =　{
   app:[
     './app.js',
@@ -15,9 +15,9 @@ wecpackConfig.entry　 =　{
 wecpackConfig.output = {
   path:'./dist', 
   filename: '[name].js'
-};//　输出
+};//　output
 
-//文件加载器
+//doc loader
 wecpackConfig.module = {
   loaders : [
     { 

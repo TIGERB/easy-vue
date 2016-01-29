@@ -1,10 +1,10 @@
-var Vue 　　　   = require('vue'); //引入vue
-var VueRouter = require('vue-router'); //引入vue-router
-var App 　　　   = require('./app.vue');// 引入根模块
+var Vue 　　　   = require('vue'); // get vue
+var VueRouter = require('vue-router'); //get vue-router
+var App 　　　   = require('./app.vue');// get root module
 
-Vue.use(VueRouter);//报错　Please install the Router with Vue.use() before creating an instance
-var router        = new VueRouter();//初始化
-var componentPath = './src/components/';//组件路径
+Vue.use(VueRouter);//error:　Please install the Router with Vue.use() before creating an instance
+var router        = new VueRouter();//init
+var componentPath = './src/components/';//component src
 
 router.map({
   '/home':{
