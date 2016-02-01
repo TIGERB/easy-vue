@@ -20,6 +20,7 @@
   ],
   "dependencies": {
     "ratchet": "^2.0.2",
-    "font-awesome": "^4.5.0"
+    "font-awesome": "^4.5.0",
+    "fastclick": "^1.0.6"
   }
 }

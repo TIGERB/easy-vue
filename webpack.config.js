@@ -1,24 +1,27 @@
 
 var webpack          = require('webpack');
-var wecpackConfig    = module.exports = {};//　init object
+var webpackDevServer = require('webpack-dev-server');
+var webpackConfig    = module.exports = {};//　init object
 
 // input
-wecpackConfig.entry　 =　{
+webpackConfig.entry　 =　{
   app:[
     './app.js',
 
     './bower_components/ratchet/dist/css/ratchet.css',
-    './bower_components/font-awesome/css/font-awesome.css'
+    './bower_components/font-awesome/css/font-awesome.css',
+    // './bower_components/fastclick/lib/fastclick.js'
   ],
 };
 
-wecpackConfig.output = {
-  path:'./dist', 
+webpackConfig.output = {
+  path:'./dist',
+  publicPath:'./dist/',
   filename: '[name].js'
 };//　output
 
 //doc loader
-wecpackConfig.module = {
+webpackConfig.module = {
   loaders : [
     { 
       test: /\.css$/, 
@@ -35,7 +38,14 @@ wecpackConfig.module = {
       test: /\.(eot(|\?v=4.5.0)|woff(|\?v=4.5.0)|woff2(|\?v=4.5.0)|ttf(|\?v=4.5.0)|svg(|\?v=4.5.0))$/, 
       loader: 'file'
     },
+    { 
+      test: /\.json/, 
+      loader: 'json'
+    },
   ]
-}; 
+};
+
+
+
 
 
