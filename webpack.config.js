@@ -10,7 +10,6 @@ webpackConfig.entry　 =　{
 
     './bower_components/ratchet/dist/css/ratchet.css',
     './bower_components/font-awesome/css/font-awesome.css',
-    // './bower_components/fastclick/lib/fastclick.js'
   ],
 };
 
@@ -35,7 +34,7 @@ webpackConfig.module = {
       loader: 'babel'
     },
     { 
-      test: /\.(eot(|\?v=4.5.0)|woff(|\?v=4.5.0)|woff2(|\?v=4.5.0)|ttf(|\?v=4.5.0)|svg(|\?v=4.5.0))$/, 
+      test: /\.(eot(|\?v=.*)|woff(|\?v=.*)|woff2(|\?v=.*)|ttf(|\?v=.*)|svg(|\?v=.*))$/, 
       loader: 'file'
     },
     { 
@@ -44,6 +43,12 @@ webpackConfig.module = {
     },
   ]
 };
+
+// webpackConfig.plugins = [
+//   new webpack.ProvidePlugin({
+//     'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+//   })
+// ];
 
 
 

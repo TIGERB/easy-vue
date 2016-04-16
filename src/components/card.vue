@@ -10,32 +10,35 @@
   module.exports = {
     data:function () {
       return {
-        results : [
-        'testing testing testin gtesting testing testin gtesting testing testing testing testing testing testing testing testing testing testingtestingtestingtesting end',
-        'testing testing testin gtesting testing testin gtesting testing testing testing testing testing testing testing testing testing testingtestingtestingtesting end',
-        'testing testing testin gtesting testing testin gtesting testing testing testing testing testing testing testing testing testing testingtestingtestingtesting end',
-        'testing testing testin gtesting testing testin gtesting testing testing testing testing testing testing testing testing testing testingtestingtestingtesting end',
-        'testing testing testin gtesting testing testin gtesting testing testing testing testing testing testing testing testing testing testingtestingtestingtesting end',
-        'testing testing testin gtesting testing testin gtesting testing testing testing testing testing testing testing testing testing testingtestingtestingtesting end',
-        'testing testing testin gtesting testing testin gtesting testing testing testing testing testing testing testing testing testing testingtestingtestingtesting end',
-        'testing testing testin gtesting testing testin gtesting testing testing testing testing testing testing testing testing testing testingtestingtestingtesting end',
-        'testing testing testin gtesting testing testin gtesting testing testing testing testing testing testing testing testing testing testingtestingtestingtesting end',
-        'testing testing testin gtesting testing testin gtesting testing testing testing testing testing testing testing testing testing testingtestingtestingtesting end',
-        'testing testing testin gtesting testing testin gtesting testing testing testing testing testing testing testing testing testing testingtestingtestingtesting end',
-        'testing testing testin gtesting testing testin gtesting testing testing testing testing testing testing testing testing testing testingtestingtestingtesting end',
-        'testing testing testin gtesting testing testin gtesting testing testing testing testing testing testing testing testing testing testingtestingtestingtesting end',
-        'testing testing testin gtesting testing testin gtesting testing testing testing testing testing testing testing testing testing testingtestingtestingtesting end',
-        'testing testing testin gtesting testing testin gtesting testing testing testing testing testing testing testing testing testing testingtestingtestingtesting end',
-        'testing testing testin gtesting testing testin gtesting testing testing testing testing testing testing testing testing testing testingtestingtestingtesting end',
-        ],
+        results : [],
         busy:false
       }
     },
-  methods:{
-    loadMore: function () {
-      this.busy = false;
-      alert('loading...');
+    ready: function () {
+      var self = this;
+      fetch('/server.php')
+      .then(function(response) {
+        return response.json()
+      }).then(function(json) {
+        self.results = json;
+      }).catch(function(ex) {
+        console.log(ex);
+      });
+    },
+    methods:{
+      loadMore: function () {
+        this.busy = true;
+        var self = this;
+        fetch('/server.php')
+        .then(function(response) {
+          return response.json()
+        }).then(function(json) {
+          self.results = self.results.concat(json);
+        }).catch(function(ex) {
+          console.log(ex);
+        });
+        this.busy = false;
+      }
     }
-  }
 }
 </script>
