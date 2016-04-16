@@ -1,9 +1,10 @@
 
 var webpack          = require('webpack');
-var wecpackConfig    = module.exports = {};//　init object
+var webpackDevServer = require('webpack-dev-server');
+var webpackConfig    = module.exports = {};//　init object
 
 // input
-wecpackConfig.entry　 =　{
+webpackConfig.entry　 =　{
   app:[
     './app.js',
 
@@ -12,13 +13,14 @@ wecpackConfig.entry　 =　{
   ],
 };
 
-wecpackConfig.output = {
-  path:'./dist', 
+webpackConfig.output = {
+  path:'./dist',
+  publicPath:'./dist/',
   filename: '[name].js'
 };//　output
 
 //doc loader
-wecpackConfig.module = {
+webpackConfig.module = {
   loaders : [
     { 
       test: /\.css$/, 
@@ -35,6 +37,10 @@ wecpackConfig.module = {
       test: /\.(eot(|\?v=.*)|woff(|\?v=.*)|woff2(|\?v=.*)|ttf(|\?v=.*)|svg(|\?v=.*))$/, 
       loader: 'file'
     },
+    { 
+      test: /\.json/, 
+      loader: 'json'
+    },
   ]
 };
 
@@ -43,5 +49,8 @@ wecpackConfig.module = {
 //     'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
 //   })
 // ];
+
+
+
 
 

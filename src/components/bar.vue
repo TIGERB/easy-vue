@@ -1,10 +1,20 @@
 <template>
   <header class="bar bar-nav bar-nsr">
+    <a class="icon icon-compose pull-right" v-on:click="writeSome"></a>
     <h1 class="title">hello vue</h1>
   </header>
 </template>
-<style>
-  .bar-nsr{
 
+<script>
+  module.exports={
+    methods:{
+      writeSome:function () {
+        alert('write something');
+      }
+    }
   }
+</script>
+
+<style>
+
 </style>

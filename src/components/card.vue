@@ -1,5 +1,7 @@
 <template>
-  <h1>card</h1>
+  <div class="content" v-infinite-scroll="loadMore()" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
+    <p v-for="result in results">{{result}}</p>
+  </div>
 </template>
 
 <script>
