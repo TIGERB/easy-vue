@@ -4,9 +4,7 @@
   "description": "webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "webpack-dev-server ./index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -18,7 +16,6 @@
     "babel-runtime": "^5.8.35",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
-    "json-loader": "^0.5.4",
     "style-loader": "^0.13.0",
     "vue-hot-reload-api": "^1.3.0",
     "vue-html-loader": "^1.1.0",
@@ -30,8 +27,12 @@
   "dependencies": {
     "fetch": "^1.0.1",
     "vue": "^1.0.15",
+<<<<<<< HEAD
     "vue-infinite-scroll": "^0.1.2",
     "vue-router": "^0.7.10",
     "whatwg-fetch": "^0.11.0"
+=======
+    "vue-router": "^0.7.10"
+>>>>>>> parent of f836f3e... add views
   }
 }

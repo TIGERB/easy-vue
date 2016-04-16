@@ -4,16 +4,16 @@ var App 　　　   = require('./app.vue');// get root module
 
 Vue.use(VueRouter);//error:　Please install the Router with Vue.use() before creating an instance
 var router        = new VueRouter();//init
-var viewPath = './src/views/';//component src
+var componentPath = './src/components/';//component src
 
 router.map({
   '/home':{
     name:'home',
-    component:require(viewPath+'home.vue')
+    component:require(componentPath+'bar.vue')
   },
   '/login':{
     name:'login',
-    component:require(viewPath+'home.vue')
+    component:require(componentPath+'card.vue')
   }
 });
 
