@@ -1,7 +1,7 @@
-
-var webpack          = require('webpack');
-var webpackDevServer = require('webpack-dev-server');
-var webpackConfig    = module.exports = {};//　init object
+var webpack           = require('webpack');
+var webpackDevServer  = require('webpack-dev-server');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpackConfig     = module.exports = {};//　init object
 
 // input
 webpackConfig.entry　 =　{
@@ -15,8 +15,8 @@ webpackConfig.entry　 =　{
 
 webpackConfig.output = {
   path:'./dist',
-  publicPath:'./dist/',
-  filename: '[name].js'
+  publicPath:'./',
+  filename: '[name].[hash].js'
 };//　output
 
 //doc loader
@@ -44,11 +44,13 @@ webpackConfig.module = {
   ]
 };
 
-// webpackConfig.plugins = [
-//   new webpack.ProvidePlugin({
-//     'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
-//   })
-// ];
+webpackConfig.plugins = [
+  new HtmlWebpackPlugin({
+    title: 'nsr',
+    filename: 'index.html',
+    template: './index.template.html'
+  })
+];
 
 
 
