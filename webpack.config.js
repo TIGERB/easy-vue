@@ -6,10 +6,12 @@ var webpackConfig     = module.exports = {};//　init object
 // input
 webpackConfig.entry　 =　{
   app:[
-    './app.js',
-
+    // vender
     './bower_components/ratchet/dist/css/ratchet.css',
     './bower_components/font-awesome/css/font-awesome.css',
+
+    // main
+    './app.js',
   ],
 };
 
@@ -46,7 +48,7 @@ webpackConfig.module = {
 
 webpackConfig.plugins = [
   new HtmlWebpackPlugin({
-    title: 'nsr',
+    title: 'easy-vue',
     filename: 'index.html',
     template: './index.template.html'
   })
