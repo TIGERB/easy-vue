@@ -1,7 +1,11 @@
 var webpack           = require('webpack');
 var webpackDevServer  = require('webpack-dev-server');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractPlugin     = require('extract-text-webpack-plugin');// separate css
+var CleanPlugin       = require('clean-webpack-plugin');// clean bulid file
+
 var webpackConfig     = module.exports = {};//　init object
+var production        = process.env.NODE_ENV === 'production';// production environment
 
 // input
 webpackConfig.entry　 =　{
@@ -16,9 +20,9 @@ webpackConfig.entry　 =　{
 };
 
 webpackConfig.output = {
-  path:'./dist',
-  publicPath:'./',
-  filename: '[name].[hash].js'
+  path: './dist',
+  publicPath: './',
+  filename: production? '[name].[hash].js': '[name].js'
 };//　output
 
 //doc loader
@@ -26,7 +30,7 @@ webpackConfig.module = {
   loaders : [
     { 
       test: /\.css$/, 
-      loader: 'style!css'
+      loader: ExtractPlugin.extract('style', 'css')
     },
     { 
       test: /\.vue$/, 
@@ -47,13 +51,29 @@ webpackConfig.module = {
 };
 
 webpackConfig.plugins = [
+  // make index.html
   new HtmlWebpackPlugin({
     title: 'easy-vue',
     filename: 'index.html',
     template: './index.template.html'
-  })
+  }),
+  // separate css file
+  new ExtractPlugin(production? 'app.[hash].css': 'app.css'),
+  // cancel warn when use webpack -p
+  new webpack.optimize.UglifyJsPlugin({
+      compress: {
+          warnings: false
+      }
+  }),
 ];
 
+/* production plugins need */
+if (production) {
+  webpackConfig.plugins.concat([
+    // clean build file
+    new CleanPlugin('dist')
+    ]);
+}
 
 
 
