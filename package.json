@@ -1,7 +1,7 @@
 {
-  "name": "test",
-  "version": "1.0.0",
-  "description": "webpack",
+  "name": "easy-vue",
+  "version": "0.1.1",
+  "description": "Learn Vue Easy",
   "main": "index.js",
   "scripts": {
     "test": "webpack -p",

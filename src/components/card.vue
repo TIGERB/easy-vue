@@ -42,3 +42,12 @@
     }
 }
 </script>
+
+<style>
+  p{
+    display: inline-block;
+    margin: 0 5%;
+    padding: 5% 0;
+    border-bottom: 1px solid #eee; 
+  }
+</style>

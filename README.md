@@ -6,10 +6,9 @@
 
 > [download](https://github.com/TIGERB/easy-vue/releases/tag/v0.1.0)
 
-### how to use ?
+### How To Use ?
 
-> `a php environment to use apt-get install php5 and php5-fpm if you use debian`
-
+* `php environment to use server.php simulate api`
 * `npm install`
 * `bower install`
 * `npm run test (develop environment) OR npm run build (production environment)`

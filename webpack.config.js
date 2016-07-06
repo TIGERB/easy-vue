@@ -7,6 +7,8 @@ var CleanPlugin       = require('clean-webpack-plugin');// clean bulid file
 var webpackConfig     = module.exports = {};//　init object
 var production        = process.env.NODE_ENV === 'production';// production environment
 
+var domain            = 'http://easy-vue.local'; // your domain
+
 // input
 webpackConfig.entry　 =　{
   app:[
@@ -21,7 +23,7 @@ webpackConfig.entry　 =　{
 
 webpackConfig.output = {
   path: './dist',
-  publicPath: './',
+  publicPath: domain+'/dist/',
   filename: production? '[name].[hash].js': '[name].js'
 };//　output
 
@@ -37,7 +39,8 @@ webpackConfig.module = {
       loader: 'vue'
     },
     { test: /\.js$/, 
-      loader: 'babel'
+      loader: 'babel',
+      query: {compact: false}
     },
     { 
       test: /\.(eot(|\?v=.*)|woff(|\?v=.*)|woff2(|\?v=.*)|ttf(|\?v=.*)|svg(|\?v=.*))$/, 
@@ -54,7 +57,7 @@ webpackConfig.plugins = [
   // make index.html
   new HtmlWebpackPlugin({
     title: 'easy-vue',
-    filename: 'index.html',
+    filename: '../index.html',
     template: './index.template.html'
   }),
   // separate css file

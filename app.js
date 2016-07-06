@@ -7,12 +7,12 @@ var router   	 = new VueRouter();//init
 var viewPath 	 = './src/views/';//component src
 
 router.map({
-  '/home':{
-    name:'home',
+  '/':{
+    name:'',
     component:require(viewPath+'home.vue')
   },
-  '/login':{
-    name:'login',
+  '/home':{
+    name:'home',
     component:require(viewPath+'home.vue')
   }
 });
