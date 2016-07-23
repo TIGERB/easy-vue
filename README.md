@@ -1,9 +1,10 @@
 ## Learn Vue Easy
 
 > a easy sample to use vue to implement easy web
+
 ---
 
-## Version 0.2.3(2016/07/22)
+## Version 0.2.0 (2016/07/22)
 
 > [download](https://github.com/TIGERB/easy-vue/releases/tag/v0.2.0)
 
