@@ -13,7 +13,7 @@
 > <http://tigerb.github.io/easy-vue>
 
 ## How To Use ?
-
+* `update the variable "domain" to your domain in webpack.config.js`
 * `npm install`
 * `bower install`
 * `npm run test (develop environment) OR npm run build (production environment)`
