@@ -1,11 +1,19 @@
-var Vue 　　　   = require('vue'); // get vue
-var VueRouter    = require('vue-router'); //get vue-router
-var App 　　　   = require('./app.vue');// get root module
+var Vue 　　　       = require('vue'); // get vue
+var App 　　　       = require('./app.vue');// get root module
+
+var VueRouter       = require('vue-router'); //get vue-router
+var VueProgressBar  = require('vue-progressbar');// get vue-progressbar
 
 Vue.use(VueRouter);//error:　Please install the Router with Vue.use() before creating an instance
+Vue.use(VueProgressBar, {
+  color: 'rgb(143, 255, 199)',
+  failedColor: 'red',
+  height: '3px'
+});// can use progressbar
+
 var router   	 = new VueRouter({
     // history: true, //this config is to del anchor point like "#!"
-    // saveScrollPosition: true 
+    // saveScrollPosition: true
 });//init
 var viewPath 	 = './src/views/';//component src
 
@@ -25,5 +33,3 @@ router.map({
 });
 
 router.start(App,'#app');
-
-

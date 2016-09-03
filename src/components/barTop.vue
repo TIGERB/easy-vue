@@ -21,5 +21,10 @@
 </script>
 
 <style>
-
+  .bar-easy-vue{
+    background-color: #1abc9c;
+  }
+  .bar-easy-vue a, h1{
+    color: #fff !important;
+  }
 </style>

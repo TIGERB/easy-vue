@@ -30,24 +30,28 @@ webpackConfig.output = {
 //doc loader
 webpackConfig.module = {
   loaders : [
-    { 
-      test: /\.css$/, 
+    {
+      test: /\.css$/,
       loader: ExtractPlugin.extract('style', 'css')
     },
-    { 
-      test: /\.vue$/, 
+    {
+      test: /\.vue$/,
       loader: 'vue'
     },
-    { test: /\.js$/, 
+    { test: /\.js$/,
       loader: 'babel',
       query: {compact: false}
     },
-    { 
-      test: /\.(eot(|\?v=.*)|woff(|\?v=.*)|woff2(|\?v=.*)|ttf(|\?v=.*)|svg(|\?v=.*))$/, 
+    {
+      test: /\.(eot(|\?v=.*)|woff(|\?v=.*)|woff2(|\?v=.*)|ttf(|\?v=.*)|svg(|\?v=.*))$/,
       loader: 'file'
     },
-    { 
-      test: /\.json/, 
+    {
+      test: /\.(png|jpg|gif)$/,
+      loader: 'file'
+    },
+    {
+      test: /\.json/,
       loader: 'json'
     },
   ]
@@ -77,7 +81,3 @@ if (production) {
     new CleanPlugin('dist')
     ]);
 }
-
-
-
-

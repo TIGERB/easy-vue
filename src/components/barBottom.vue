@@ -43,12 +43,20 @@
 	    	}
 	    },
 	    methods: {
-	    	
+
 	    }
   	}
 </script>
 <style>
-.easy-bottom-bar .easy-fa-color{
-	color: #428bca;
+.easy-bottom-bar{
+	background-color: #1abc9c;
+	color: #fff;
+	border:none;
+}
+.easy-bottom-bar a{
+	color: #cdd !important;
+}
+.easy-fa-color{
+	color: #fff !important;
 }
 </style>
