@@ -13,7 +13,10 @@
         alert('write something');
       },
       refresh: function () {
-        this.$store.state.card.isRefresh = true;
+        this.$store.dispatch('getData', {
+          progress: this,
+          refresh: true
+        });
       }
     }
   }

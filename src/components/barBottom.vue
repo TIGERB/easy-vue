@@ -27,17 +27,17 @@
 	    mounted: function () {
 				this.$nextTick(function () {
 					var uri = window.location.hash;
-		    	if (uri === '#!/') {
+		    	if (uri === '#/') {
 					this.isOnePage   = true;
 					this.isTwoPage   = false;
 					this.isThreePage = false;
 		    	}
-		    	if (uri === '#!/two') {
+		    	if (uri === '#/two') {
 					this.isOnePage   = false;
 					this.isTwoPage   = true;
 					this.isThreePage = false;
 		    	}
-		    	if (uri === '#!/three') {
+		    	if (uri === '#/three') {
 					this.isOnePage   = false;
 					this.isTwoPage   = false;
 					this.isThreePage = true;

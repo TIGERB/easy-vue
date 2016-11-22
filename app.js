@@ -1,26 +1,26 @@
 var Vue　　　 = require('vue'); // get vue
 var App　　　 = require('./app.vue'); // get root module
-var store　　 = require('./store.js'); // get root module
+var store　　 = require('./store.js'); // get vuxe -> store
 
 var VueRouter = require('vue-router'); //get vue-router
 var VueProgressBar = require('vue-progressbar'); // get vue-progressbar
-var infiniteScroll =  require('vue-infinite-scroll');
+var infiniteScroll =  require('vue-infinite-scroll');// get vue-infinite-scroll
 
-Vue.use(infiniteScroll)
-Vue.use(VueRouter); //error:　Please install the Router with Vue.use() before creating an instance
+Vue.use(VueRouter);
 var options = {
-  color: '#bffaf3',
+  color: '#fff',
   failedColor: '#874b4b',
-  thickness: '5px',
+  thickness: '3px',
   transition: {
     speed: '0.2s',
     opacity: '0.6s'
   },
   autoRevert: true,
-  location: 'left',
+  location: 'top',
   inverse: false
 };
 Vue.use(VueProgressBar, options);
+Vue.use(infiniteScroll)
 
 var viewPath = './src/views/'; //component src
 var routes = [
@@ -39,5 +39,4 @@ var app = new Vue({
     render: function (h) {
       return h(App);
     }
-    // store,
 }).$mount('#app');
