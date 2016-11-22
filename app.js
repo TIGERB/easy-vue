@@ -1,35 +1,42 @@
-var Vue 　　　       = require('vue'); // get vue
-var App 　　　       = require('./app.vue');// get root module
+var Vue　　　 = require('vue'); // get vue
+var App　　　 = require('./app.vue'); // get root module
+var store　　 = require('./store.js'); // get vuxe -> store
 
-var VueRouter       = require('vue-router'); //get vue-router
-var VueProgressBar  = require('vue-progressbar');// get vue-progressbar
+var VueRouter = require('vue-router'); //get vue-router
+var VueProgressBar = require('vue-progressbar'); // get vue-progressbar
+var infiniteScroll =  require('vue-infinite-scroll');// get vue-infinite-scroll
 
-Vue.use(VueRouter);//error:　Please install the Router with Vue.use() before creating an instance
-Vue.use(VueProgressBar, {
-  color: 'rgb(143, 255, 199)',
-  failedColor: 'red',
-  height: '3px'
-});// can use progressbar
-
-var router   	 = new VueRouter({
-    // history: true, //this config is to del anchor point like "#!"
-    // saveScrollPosition: true
-});//init
-var viewPath 	 = './src/views/';//component src
-
-router.map({
-  '/':{
-    name:'',
-    component:require(viewPath+'pageone.vue')
+Vue.use(VueRouter);
+var options = {
+  color: '#fff',
+  failedColor: '#874b4b',
+  thickness: '3px',
+  transition: {
+    speed: '0.2s',
+    opacity: '0.6s'
   },
-  '/two':{
-    name:'two',
-    component:require(viewPath+'pagetwo.vue')
-  },
-  '/three':{
-    name:'three',
-    component:require(viewPath+'pagethree.vue')
-  }
+  autoRevert: true,
+  location: 'top',
+  inverse: false
+};
+Vue.use(VueProgressBar, options);
+Vue.use(infiniteScroll)
+
+var viewPath = './src/views/'; //component src
+var routes = [
+  { path: '/', component: require(viewPath + 'pageone.vue')},
+  { path: '/two', component: require(viewPath + 'pagetwo.vue')},
+  { path: '/three', component: require(viewPath + 'pagethree.vue')}
+];
+var router = new VueRouter({
+  routes: routes
 });
 
-router.start(App,'#app');
+//init
+var app = new Vue({
+    router: router,
+    store: store,
+    render: function (h) {
+      return h(App);
+    }
+}).$mount('#app');

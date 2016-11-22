@@ -13,8 +13,10 @@
         alert('write something');
       },
       refresh: function () {
-        // dispatch bar-top-refresh event to parent component
-        this.$dispatch('bar-top-refresh');
+        this.$store.dispatch('getData', {
+          progress: this,
+          refresh: true
+        });
       }
     }
   }

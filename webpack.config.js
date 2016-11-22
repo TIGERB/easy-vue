@@ -7,7 +7,7 @@ var CleanPlugin       = require('clean-webpack-plugin');// clean bulid file
 var webpackConfig     = module.exports = {};//　init object
 var production        = process.env.NODE_ENV === 'production';// production environment
 
-var domain            = 'http://easy-vue.local'; // your domain
+var domain            = process.env.DOMAIN; // your domain process.env.DOMAIN
 
 // input
 webpackConfig.entry　 =　{
@@ -38,9 +38,10 @@ webpackConfig.module = {
       test: /\.vue$/,
       loader: 'vue'
     },
-    { test: /\.js$/,
+    {
+      test: /\.js$/,
       loader: 'babel',
-      query: {compact: false}
+      exclude: /node_modules/
     },
     {
       test: /\.(eot(|\?v=.*)|woff(|\?v=.*)|woff2(|\?v=.*)|ttf(|\?v=.*)|svg(|\?v=.*))$/,

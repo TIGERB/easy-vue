@@ -1,17 +1,17 @@
 <template>
 	<nav class="bar bar-tab easy-bottom-bar">
-	  <a class="tab-item" href="#"  v-link="{path:'/'}">
+	  <router-link class="tab-item" to="/">
 	    <span class="icon fa fa-weixin" :class="{'easy-fa-color': isOnePage}"></span>
 	    <span class="tab-label" :class="{'easy-fa-color': isOnePage}">pageone</span>
-	  </a>
-	  <a class="tab-item" href="#" v-link="{path:'/two'}">
+	  </router-link>
+	  <router-link class="tab-item" to="/two">
 	    <span class="icon icon-pages" :class="{'easy-fa-color': isTwoPage}"></span>
 	    <span class="tab-label" :class="{'easy-fa-color': isTwoPage}">pagetwo</span>
-	  </a>
-	  <a class="tab-item" href="#" v-link="{path:'/three'}">
+	  </router-link>
+	  <router-link class="tab-item" to="/three">
 	    <span class="icon icon-person" :class="{'easy-fa-color': isThreePage}"></span>
 	    <span class="tab-label" :class="{'easy-fa-color': isThreePage}">pagethree</span>
-	  </a>
+	  </router-link>
 	</nav>
 </template>
 
@@ -24,23 +24,25 @@
   				isThreePage: false
   			}
   		},
-	    ready: function () {
-	    	var uri = window.location.hash;
-	    	if (uri === '#!/') {
-				this.isOnePage   = true;
-				this.isTwoPage   = false;
-				this.isThreePage = false;
-	    	}
-	    	if (uri === '#!/two') {
-				this.isOnePage   = false;
-				this.isTwoPage   = true;
-				this.isThreePage = false;
-	    	}
-	    	if (uri === '#!/three') {
-				this.isOnePage   = false;
-				this.isTwoPage   = false;
-				this.isThreePage = true;
-	    	}
+	    mounted: function () {
+				this.$nextTick(function () {
+					var uri = window.location.hash;
+		    	if (uri === '#/') {
+					this.isOnePage   = true;
+					this.isTwoPage   = false;
+					this.isThreePage = false;
+		    	}
+		    	if (uri === '#/two') {
+					this.isOnePage   = false;
+					this.isTwoPage   = true;
+					this.isThreePage = false;
+		    	}
+		    	if (uri === '#/three') {
+					this.isOnePage   = false;
+					this.isTwoPage   = false;
+					this.isThreePage = true;
+		    	}
+				})
 	    },
 	    methods: {
 

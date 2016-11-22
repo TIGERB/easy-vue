@@ -1,13 +1,13 @@
 {
   "name": "easy-vue",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "description": "Learn Vue Easy",
   "main": "index.js",
   "scripts": {
     "test": "webpack -p",
     "build": "NODE_ENV=production webpack -p"
   },
-  "author": "TIGERB<tigerbcoder@gmail.com>",
+  "author": "TIGERB<tigerbcode@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.4.5",
@@ -24,17 +24,18 @@
     "style-loader": "^0.13.0",
     "vue-hot-reload-api": "^1.3.0",
     "vue-html-loader": "^1.1.0",
-    "vue-loader": "^8.0.5",
+    "vue-loader": "^9.0.0",
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.12.12",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
     "fetch": "^1.0.1",
-    "vue": "^1.0.15",
-    "vue-infinite-scroll": "^0.1.2",
-    "vue-progressbar": "^0.2.5",
-    "vue-router": "^0.7.10",
-    "whatwg-fetch": "^0.11.0"
+    "vue": "^2.0.0",
+    "vue-infinite-scroll": "^2.0.0",
+    "vue-progressbar": "^0.7.0",
+    "vue-router": "^2.0.0",
+    "vuex": "^2.0.0",
+    "whatwg-fetch": "^2.0.1"
   }
 }

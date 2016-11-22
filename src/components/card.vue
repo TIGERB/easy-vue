@@ -1,5 +1,5 @@
 <template>
-  <div class="content easy-vue-card" v-infinite-scroll="loadMore()" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
+  <div class="content easy-vue-card" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
     <p v-for="result in results">
       <img src="../images/easy-vue.jpg">
       <span>{{result}}</span>
@@ -14,83 +14,51 @@
 </template>
 
 <script>
-  require('vue-infinite-scroll');
-
+  import {mapState} from 'vuex';
   module.exports = {
     data:function () {
       return {
-        results : [],
         busy:false,
-        isloadingComplete: false
+        isloadingComplete: false,
+        results: []
       }
     },
     components:{
       'nsr-loading':require('../components/loading.vue'),
     },
-    ready: function () {
-      this.fetchData(this, true);
+    mounted: function () {
+      this.$nextTick(function () {
+        this.fetchData(this);
+      })
     },
     methods:{
-      fetchData: function (Vue, refresh) {
-        var self = Vue;
-        self.$progress.set(0);
-        self.$progress.start();
-        self.isloadingComplete = false;
-        self.busy = true;
-        fetch('/server.php')
-        .then(function(response) {
-          return response.json()
-        }).then(function(json) {
-          self.$progress.finish();
-          self.isloadingComplete = true;
-          self.busy = false;
-          //fake data
-        json = [
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-          'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-        ];
-          if (refresh === true) {
-            self.results = json;
-          }else {
-            self.results = self.results.concat(json);
-          }
-        }).catch(function(ex) {
-          console.log(ex);
-          self.$progress.failed();
-          self.busy = false;
+      fetchData: function (progress) {
+        this.$store.dispatch('getData', {
+          progress: progress,
+          refresh: false
         });
       },
       loadMore: function () {
-        this.fetchData(this, false);
+        this.fetchData(this);
       }
     },
-    events:{
-      //catch refresh event boardcast by parent component
-      'refresh': function(){
-        this.fetchData(this, true);
+    computed: mapState({
+      results: function (state) {
+        return state.cardData;
+      },
+      isloadingComplete: function (state) {
+        return state.isloadingComplete;
+      },
+      busy: function (state) {
+        return state.busy;
       }
-    }
+    })
 }
 </script>
 
 <style>
   .easy-vue-card{
-      background-color: #f3f3f3 !important;
+    background-color: #f3f3f3 !important;
   }
 
   .easy-vue-card p{
