@@ -1,5 +1,4 @@
 <template>
-  {{store.state.moduleCard.test}}
   <div class="content easy-vue-card" v-infinite-scroll="loadMore()" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
     <p v-for="result in results">
       <img src="../images/easy-vue.jpg">
@@ -15,8 +14,6 @@
 </template>
 
 <script>
-  require('vue-infinite-scroll');
-
   module.exports = {
     data:function () {
       return {
@@ -31,8 +28,9 @@
       this.$nextTick(function () {
           console.log(this.$store);
           console.log(this.$store.state);
+          console.log(this.$store.getters);
           // this.$store.state.moduleCard.cardData = [];
-          this.fetchData(this, true);
+          // this.fetchData(this, true);
       })
     },
     methods:{
@@ -70,9 +68,9 @@
           'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
           ];
           if (refresh === true) {
-            this.$store.moduleCard.actions.clearData();
+            // this.$store.moduleCard.actions.clearData();
           }else {
-            this.$store.moduleCard.actions.addData(json);
+            // this.$store.moduleCard.actions.addData(json);
           }
         }).catch(function(ex) {
           console.log(ex);
@@ -81,7 +79,7 @@
         });
       },
       loadMore: function () {
-        this.fetchData(this, false);
+        // this.fetchData(this, false);
       }
     },
     events:{

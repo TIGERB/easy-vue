@@ -1,7 +1,6 @@
 <template>
   <div>
-    <bar-top>
-    </bar-top>
+    <bar-top></bar-top>
     <card></card>
     <bar-bottom></bar-bottom>
   </div>

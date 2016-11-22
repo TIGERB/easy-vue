@@ -4,7 +4,9 @@ var store　　 = require('./store.js'); // get root module
 
 var VueRouter = require('vue-router'); //get vue-router
 var VueProgressBar = require('vue-progressbar'); // get vue-progressbar
+var infiniteScroll =  require('vue-infinite-scroll');
 
+Vue.use(infiniteScroll)
 Vue.use(VueRouter); //error:　Please install the Router with Vue.use() before creating an instance
 var options = {
   color: '#bffaf3',

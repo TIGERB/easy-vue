@@ -9,6 +9,12 @@ var state = {
   test: 1
 };
 
+var getters = {
+  getData: function (state) {
+    return state.test;
+  }
+}
+
 var mutations = {
   addData(state, data){
     state.cardData = state.cardData.concat(data);
@@ -29,6 +35,7 @@ var actions = {
 
 var moduleCard = {
   state: state,
+  getters: getters,
   mutations: mutations,
   actions: actions
 };
