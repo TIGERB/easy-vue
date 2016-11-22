@@ -3,8 +3,10 @@
 > a easy example to use vue to implement easy web
 
 
-## Latest Version 0.3.0(2016/09/03)
+## Latest Version 0.5.0(2016/11/25)
 
+- 0.5.0
+  + use vue 2.0
 - 0.3.0
   + change UI for easy-vue
   + use vue-progressbar
@@ -14,7 +16,7 @@
   + implements page change
   + optimize UI
 
-> [latest version download](https://github.com/TIGERB/easy-vue/releases/tag/v0.3.0)
+> [latest version download](https://github.com/TIGERB/easy-vue/releases/tag/v0.5.0)
 
 ## Demo
 

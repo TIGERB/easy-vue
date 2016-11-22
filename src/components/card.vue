@@ -1,4 +1,5 @@
 <template>
+  {{store.state.moduleCard.test}}
   <div class="content easy-vue-card" v-infinite-scroll="loadMore()" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
     <p v-for="result in results">
       <img src="../images/easy-vue.jpg">
@@ -19,7 +20,6 @@
   module.exports = {
     data:function () {
       return {
-        results : [],
         busy:false,
         isloadingComplete: false
       }
@@ -27,8 +27,13 @@
     components:{
       'nsr-loading':require('../components/loading.vue'),
     },
-    ready: function () {
-      this.fetchData(this, true);
+    mounted: function () {
+      this.$nextTick(function () {
+          console.log(this.$store);
+          console.log(this.$store.state);
+          // this.$store.state.moduleCard.cardData = [];
+          this.fetchData(this, true);
+      })
     },
     methods:{
       fetchData: function (Vue, refresh) {
@@ -63,11 +68,11 @@
           'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
           'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
           'Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life' +  + Math.random()*100000000000,
-        ];
+          ];
           if (refresh === true) {
-            self.results = json;
+            this.$store.moduleCard.actions.clearData();
           }else {
-            self.results = self.results.concat(json);
+            this.$store.moduleCard.actions.addData(json);
           }
         }).catch(function(ex) {
           console.log(ex);

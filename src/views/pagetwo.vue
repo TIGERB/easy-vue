@@ -1,11 +1,10 @@
 <template>
   <div>
-    <bar-top
-    @bar-top-refresh="refresh">
+    <bar-top>
     </bar-top>
     <card></card>
     <bar-bottom></bar-bottom>
-  </div> 
+  </div>
 </template>
 
 <script>
@@ -20,15 +19,11 @@
       'bar-bottom':barBottom,
     },
     methods:{
-      refresh: function () {
-        //catch bar-top-refresh event dispatch by son component
-        //broadcast all son component to execute refresh event
-        this.$broadcast('refresh');
-      }
+  
     }
   }
 </script>
 
 <style>
-  
+
 </style>
