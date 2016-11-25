@@ -12,10 +12,6 @@ var domain            = process.env.DOMAIN; // your domain process.env.DOMAIN
 // input
 webpackConfig.entry　 =　{
   app:[
-    // vender
-    './bower_components/ratchet/dist/css/ratchet.css',
-    './bower_components/font-awesome/css/font-awesome.css',
-
     // main
     './app.js',
   ],
