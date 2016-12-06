@@ -15,6 +15,7 @@
 
 <script>
   import {mapState} from 'vuex';
+  
   module.exports = {
     data:function () {
       return {

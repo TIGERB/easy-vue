@@ -10,14 +10,14 @@
   module.exports={
     methods:{
       writeSome:function () {
-        alert('write something');
+        this.$store.commit('isShowAlert', true);
       },
       refresh: function () {
         this.$store.dispatch('getData', {
           progress: this,
           refresh: true
         });
-      }
+      },
     }
   }
 </script>

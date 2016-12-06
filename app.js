@@ -1,5 +1,6 @@
 require('!style!css!ratchet-npm/dist/css/ratchet.css');// get ratchet
 require('!style!css!font-awesome/css/font-awesome.css');// get font-awesome
+require('!style!css!animate.css/animate.css');// get animate.css
 
 var Vue　　　 = require('vue'); // get vue
 var App　　　 = require('./app.vue'); // get root module

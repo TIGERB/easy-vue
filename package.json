@@ -1,6 +1,6 @@
 {
   "name": "easy-vue",
-  "version": "0.5.0",
+  "version": "0.5.2",
   "description": "Learn Vue Easy",
   "main": "index.js",
   "scripts": {
@@ -30,6 +30,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "fastclick": "^1.0.6",
     "fetch": "^1.0.1",
     "font-awesome": "^4.7.0",
