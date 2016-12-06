@@ -1,7 +1,7 @@
 <template>
   <div>
     <bar-top></bar-top>
-    <card></card>
+    <list></list>
     <bar-bottom></bar-bottom>
     <alert></alert>
   </div>
@@ -9,14 +9,14 @@
 
 <script>
   var barTop  = require('../components/barTop.vue');
-  var card = require('../components/card.vue');
+  var list = require('../components/list.vue');
   var barBottom  = require('../components/barBottom.vue');
   var alert  = require('../components/alert.vue');
 
   module.exports = {
     components:{
       'bar-top':barTop,
-      'card':card,
+      'list':list,
       'alert':alert,
       'bar-bottom':barBottom,
     },

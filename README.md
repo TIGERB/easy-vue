@@ -1,10 +1,13 @@
 ## Learn Vue Easy
 
-> a easy example to use vue to implement easy web
+> a easy example using the vue to implement easy web
 
 
-## Latest Version 0.5.1(2016/11/25)
-
+## Latest Version 0.6.0(2016/12/10)
+- 0.6.0 (2016/12/10)
+  + add component alert,go-top,list,button
+  + update view pagetwo&pagethree by use component list&button
+  + add directive
 - 0.5.1 (2016/11/25)
   + do not rely on bower
 - 0.5.0 (2016/11/22)
@@ -19,7 +22,7 @@
   + implements page change
   + optimize UI
 
-> [latest version download](https://github.com/TIGERB/easy-vue/releases/tag/v0.5.1)
+> [latest version download](https://github.com/TIGERB/easy-vue/releases/tag/v0.6.0)
 
 ## Demo
 

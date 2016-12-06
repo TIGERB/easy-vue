@@ -1,5 +1,8 @@
 <template>
-  <div class="content easy-vue-card" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
+  <div class="content easy-vue-card" 
+  v-infinite-scroll="loadMore"
+  infinite-scroll-disabled="busy"
+  infinite-scroll-distance="10">
     <p v-for="result in results">
       <img src="../images/easy-vue.jpg">
       <span>{{result}}</span>
@@ -15,7 +18,7 @@
 
 <script>
   import {mapState} from 'vuex';
-  
+
   module.exports = {
     data:function () {
       return {
