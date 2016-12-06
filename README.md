@@ -4,16 +4,18 @@
 
 
 ## Latest Version 0.6.0(2016/12/10)
-- 0.6.0 (2016/12/10)
-  + add component alert,go-top,list,button
+- 0.6.0 [2016/12/10]
+  + add component alert,go-top,list,button,content
+  + add view detail
+  + update component barBottom
   + update view pagetwo&pagethree by use component list&button
-  + add directive
-- 0.5.1 (2016/11/25)
+  + use directive
+- 0.5.1 [2016/11/25]
   + do not rely on bower
-- 0.5.0 (2016/11/22)
+- 0.5.0 [2016/11/22]
   + use vue 2.0
   + use vuex 2.0
-- 0.3.0 (2016/09/13)
+- 0.3.0 [2016/09/13]
   + change UI for easy-vue
   + use vue-progressbar
   + add loading animation component in src/components
