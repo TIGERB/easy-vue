@@ -1,16 +1,16 @@
 <template>
 	<nav class="bar bar-tab easy-bottom-bar">
 	  <router-link class="tab-item" to="/">
-	    <span class="icon fa fa-weixin" :class="{'easy-fa-color': isOnePage}"></span>
-	    <span class="tab-label" :class="{'easy-fa-color': isOnePage}">pageone</span>
+	    <span class="icon fa fa-weixin" :class="{'easy-fa-color': isHome}"></span>
+	    <span class="tab-label" :class="{'easy-fa-color': isHome}">home</span>
 	  </router-link>
-	  <router-link class="tab-item" to="/two">
-	    <span class="icon icon-pages" :class="{'easy-fa-color': isTwoPage}"></span>
-	    <span class="tab-label" :class="{'easy-fa-color': isTwoPage}">pagetwo</span>
+	  <router-link class="tab-item" to="/lists">
+	    <span class="icon icon-pages" :class="{'easy-fa-color': isList}"></span>
+	    <span class="tab-label" :class="{'easy-fa-color': isList}">lists</span>
 	  </router-link>
-	  <router-link class="tab-item" to="/three">
-	    <span class="icon icon-person" :class="{'easy-fa-color': isThreePage}"></span>
-	    <span class="tab-label" :class="{'easy-fa-color': isThreePage}">pagethree</span>
+	  <router-link class="tab-item" to="/option">
+	    <span class="icon icon-person" :class="{'easy-fa-color': isOption}"></span>
+	    <span class="tab-label" :class="{'easy-fa-color': isOption}">option</span>
 	  </router-link>
 	</nav>
 </template>
@@ -19,28 +19,28 @@
   	module.exports = {
   		data: function () {
   			return {
-  				isOnePage: true,
-  				isTwoPage: false,
-  				isThreePage: false
+  				isHome: true,
+  				isList: false,
+  				isOption: false
   			}
   		},
 	    mounted: function () {
 				this.$nextTick(function () {
 					var uri = this.$route.path;
 		    	if (uri === '/') {
-					this.isOnePage   = true;
-					this.isTwoPage   = false;
-					this.isThreePage = false;
+					this.isHome   = true;
+					this.isList   = false;
+					this.isOption = false;
 		    	}
-		    	if (uri === '/two') {
-					this.isOnePage   = false;
-					this.isTwoPage   = true;
-					this.isThreePage = false;
+		    	if (uri === '/lists') {
+					this.isHome   = false;
+					this.isList   = true;
+					this.isOption = false;
 		    	}
-		    	if (uri === '/three') {
-					this.isOnePage   = false;
-					this.isTwoPage   = false;
-					this.isThreePage = true;
+		    	if (uri === '/option') {
+					this.isHome   = false;
+					this.isList   = false;
+					this.isOption = true;
 		    	}
 				})
 	    },

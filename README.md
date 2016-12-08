@@ -3,13 +3,14 @@
 > a easy example using the vue to implement easy web
 
 
-## Latest Version 0.6.0(2016/12/10)
-- 0.6.0 [2016/12/10]
-  + add component alert,go-top,list,button,content
+## Latest Version 0.6.0(2016/12/08)
+- 0.6.0 [2016/12/08]
+  + fix not require fastclick from node_modules
+  + rename view
+  + add component alert, list, button, text
   + add view detail
-  + update component barBottom
-  + update view pagetwo&pagethree by use component list&button
-  + use directive
+  + update component barBottom, barTop
+  + update view list&option by use component list&button
 - 0.5.1 [2016/11/25]
   + do not rely on bower
 - 0.5.0 [2016/11/22]

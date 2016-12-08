@@ -1,14 +1,14 @@
 <template>
     <ul class="content table-view easy-list" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
         <li class="table-view-cell media" v-for="result in results">
-            <a class="navigate-right">
+            <router-link class="navigate-right" to="/detail">
                 <img class="media-object pull-left" src="../images/easy-vue.jpg">
                 <div class="media-body">
                     hello vue
                     <!-- <p>{{result}}</p> -->
                     <p>a easy example using the vue to implement easy web</p>
                 </div>
-            </a>
+            </router-link>
         </li>
         <div class="nsr-card-loading">
             <nsr-loading :hide-loading="isloadingComplete" :is-end-text="endText">
