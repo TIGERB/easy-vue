@@ -1,6 +1,13 @@
 .DS_Store
 node_modules
 bower_components
-dist
+src
 npm-debug.log
-index.html
+.bowerrc
+app.js
+app.vue
+bower.json
+index.template.html
+package.json
+webpack.config.js
+webpack.dev.js

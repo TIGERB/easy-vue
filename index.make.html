@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="http://tigerb.github.io/easy-vue/dist/app.47d7bf7b4c18531f1323.css" rel="stylesheet">
+    <style media="screen">
+        .pc-show {
+            width: 1000px;
+            height: 760px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        .pc-slogan {
+            width: 650px;
+            display: block;
+            float: left;
+        }
+
+        .pc-slogan p {
+            text-align: center;
+            padding-top: 280px;
+            color: #1abc9c;
+            font-size: 39px;
+            font-family: monospace;
+        }
+
+        .pc-slogan h6 {
+            text-align: center;
+            padding-top: 15px;
+            color: #bbb;
+            font-size: 20px;
+            font-weight: lighter;
+        }
+        .pc-github{
+          width: 190px;
+          margin: 50px auto;
+        }
+        .pc-github iframe{
+          width: 90px;
+        }
+
+        .pc-phone {
+            min-width: 350px;
+            display: inline-block;
+            width: 350px;
+            height: 760px;
+            background: url('https://raw.githubusercontent.com/TIGERB/easy-vue/gh-pages/phone.png') no-repeat;
+            background-size: cover;
+        }
+
+        .pc-phone iframe {
+            width: 326px;
+            height: 560px;
+            margin: 100px 12px;
+        }
+    </style>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e08c44649498e1704a0c238d55523c5f";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- pc -->
+    <div id="pc" class="pc-show">
+        <div class="pc-slogan">
+            <p>
+                Learn Vue Easy
+            </p>
+            <h6>
+        a easy example using the vue to implement easy web
+      </h6>
+      <div class="pc-github">
+        <iframe src="https://ghbtns.com/github-btn.html?user=tigerb&repo=easy-vue&type=star&count=true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+        <iframe src="https://ghbtns.com/github-btn.html?user=tigerb&repo=easy-vue&type=fork&count=true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+      </div>
+        </div>
+        <div class="pc-phone">
+            <iframe src="http://tigerb.github.io/easy-vue/index.make.html" frameborder="0"></iframe>
+        </div>
+    </div>
+    <!-- mobile -->
+    <div id="mobile">
+        <div id='app'></div>
+    </div>
+    <script type="text/javascript" src="http://tigerb.github.io/easy-vue/dist/app.47d7bf7b4c18531f1323.js"></script>
+</body>
+<script type="text/javascript">
+    var width = window.screen.width;
+    if (width >= 900) {
+        var mobile = document.getElementById('mobile');
+        mobile.removeChild(mobile.childNodes[1]);
+    }
+</script>
+</body>
+
+</html>
