@@ -1,9 +1,10 @@
 <template>
   <div>
     <bar-top
-    :show-refesh-icon="true"
+    :show-refesh-icon="false"
     :show-return-icon="false"
-    :show-write-icon="false"></bar-top>
+    :show-write-icon="false">
+    </bar-top>
     <div class="pagethree-button">
         <option-button></option-button>
     </div>
