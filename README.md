@@ -7,9 +7,9 @@
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
 </p>
 
-## Learn Vue Easy
+## Learn Vue Easily
 
-> a easy example using the vue to implement easy web
+> an easy example using Vue to implement easy web
 
 
 ## Latest Version 0.6.0(2016/12/08)
