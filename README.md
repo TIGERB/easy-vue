@@ -2,7 +2,7 @@
 
 <p align="center">
 <a href="http://vue.tigerb.cn/#/"><img src="https://img.shields.io/badge/build-passing-brightgreen.svg" alt="Build Status"></a>
-<a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/version-0.6.0-lightgrey.svg" alt="Version"></a>
+<a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/version-0.6.1-lightgrey.svg" alt="Version"></a>
 <a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/download-34.8kb-orange.svg" alt="Downloads"></a>
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
 </p>
@@ -12,7 +12,9 @@
 > an easy example using Vue to implement easy web
 
 
-## Latest Version 0.6.0(2016/12/08)
+## Latest Version 0.6.1(2017/03/06)
+- 0.6.1 [2017/03/06]
+  + use yarn
 - 0.6.0 [2016/12/08]
   + fix not require fastclick from node_modules
   + rename view
@@ -34,11 +36,11 @@
   + implements page change
   + optimize UI
 
-> [latest version download](https://github.com/TIGERB/easy-vue/releases/tag/v0.6.0)
+> [latest version download](https://github.com/TIGERB/easy-vue/releases/tag/v0.6.1)
 
 ## Demo
 
-> <http://tigerb.github.io/easy-vue>
+> <http://vue.tigerb.cn>
 
 ## How To Use ?
 1. npm install

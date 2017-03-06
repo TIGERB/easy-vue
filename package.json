@@ -1,7 +1,7 @@
 {
   "name": "easy-vue",
-  "version": "0.6.0",
-  "description": "Learn Vue Easy",
+  "version": "0.6.1",
+  "description": "Learn Vue Easily",
   "main": "index.js",
   "scripts": {
     "test": "webpack -p -d --colors",
