@@ -9,7 +9,7 @@
 
 ## Learn Vue Easily
 
-> an easy example using Vue to implement easy web
+> an easy example using Vue2.0 to implement easy web
 
 
 ## Latest Version 0.6.1(2017/03/06)
