@@ -1,11 +1,11 @@
 <template>
-  <div class="content easy-vue-card" 
+  <div class="content easy-vue-card"
   v-infinite-scroll="loadMore"
   infinite-scroll-disabled="busy"
   infinite-scroll-distance="10">
     <p v-for="result in results">
-      <img src="../images/easy-vue.jpg">
-      <span>{{result}}</span>
+      <img :src="result.img">
+      <span>{{result.content}}</span>
     </p>
     <div class="nsr-card-loading">
       <nsr-loading
