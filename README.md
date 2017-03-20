@@ -1,6 +1,9 @@
-<h1 align="center">Easy Vue</h1>
 
-<img src="./src/images/logo-3.png" style="display: block; margin:0 auto 0 auto;" width="360px">    
+<p align="center">
+    <img src="./src/images/logo-3.png" width="360px">
+</p>   
+
+<h1 align="center">Easy Vue</h1>
 
 <p align="center">
 <a href="http://vue.tigerb.cn/#/"><img src="https://img.shields.io/badge/build-passing-brightgreen.svg" alt="Build Status"></a>
@@ -14,8 +17,8 @@
 > an easy example using Vue2.0 to implement easy web
 
 
-## Support
-Support            |Version
+## Dependence
+Dependence         |Version
 -------------------|-------
 Vue                |2.0
 Vuex               |2.0
