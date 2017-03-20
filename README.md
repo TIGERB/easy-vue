@@ -7,7 +7,7 @@
 
 <p align="center">
 <a href="http://vue.tigerb.cn/#/"><img src="https://img.shields.io/badge/build-passing-brightgreen.svg" alt="Build Status"></a>
-<a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/version-0.6.1-lightgrey.svg" alt="Version"></a>
+<a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/version-0.7.0-lightgrey.svg" alt="Version"></a>
 <a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/download-34.8kb-orange.svg" alt="Downloads"></a>
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
 </p>

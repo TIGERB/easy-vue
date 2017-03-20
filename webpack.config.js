@@ -5,9 +5,9 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');// separate css
 var CleanPlugin       = require('clean-webpack-plugin');// clean bulid file
 
 var webpackConfig     = module.exports = {};//　init object
-var production        = process.env.nodeEnv === 'production';// production environment
+var production        = process.env.NODE_ENV === 'production';// production environment
 
-var domain            = process.env.domain; // your domain process.env.domain
+var domain            = process.env.DOMAIN; // your domain process.env.domain
 
 // input
 webpackConfig.entry　 =　{

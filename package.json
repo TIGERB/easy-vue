@@ -4,11 +4,11 @@
   "description": "Learn Vue Easily",
   "main": "index.js",
   "scripts": {
-    "test": "webpack -p -d --colors",
-    "build": "NODE_ENV=production webpack -p --colors"
+    "test": "webpack --progress -d --colors",
+    "build": "NODE_ENV=production webpack --progress --colors"
   },
   "author": "TIGERB<tigerbcode@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.24.0",
