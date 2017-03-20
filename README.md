@@ -14,20 +14,18 @@
 
 ## Learn Vue Easily
 
-> an easy example using Vue2.0 to implement easy web
+> an easy example using Vue2 to implement easy web
 
 
 ## Dependence
 Dependence         |Version
 -------------------|-------
-Vue                |2.0
-Vuex               |2.0
-Webpack            |2.2
-vue-infinite-scroll|2.0
-vue-progressbar    |0.7.1
+Vue                |2.0+
+Vuex               |2.0+
+Webpack            |2.2+
 
-## Latest Version 0.7.0(2017/03/20)
-- 0.7.0 [2017/03/20]
+## Latest Version 0.7.0(2017/03/23)
+- 0.7.0 [2017/03/23]
   + use webpack2
   + add logo
   + use json file to to mock api
@@ -63,5 +61,11 @@ vue-progressbar    |0.7.1
 ## How To Use ?
 1. npm install
 2. build:
-  - develop environment: `DOMAIN=http://yourdomain npm run test`
-  - production environment: `DOMAIN=http://yourdomain npm run build`
+  - develop environment:
+  ```
+  DOMAIN=http://yourdomain npm run test
+  ```
+  - production environment:
+  ```
+  DOMAIN=http://yourdomain npm run build
+  ```

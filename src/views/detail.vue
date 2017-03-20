@@ -9,8 +9,8 @@
 </template>
 
 <script>
-  var barTop  = require('../components/barTop.vue');
-  var text = require('../components/text.vue');
+  import barTop from '../components/barTop.vue';
+  import text from '../components/text.vue';
 
   module.exports = {
     components:{

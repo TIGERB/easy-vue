@@ -27,6 +27,7 @@ module.exports = {
         return {
             busy: false,
             isloadingComplete: false,
+            endText: false,
             results: []
         }
     },

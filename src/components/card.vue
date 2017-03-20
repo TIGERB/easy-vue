@@ -24,6 +24,7 @@
       return {
         busy:false,
         isloadingComplete: false,
+        endText: false,
         results: []
       }
     },
@@ -33,6 +34,7 @@
     mounted: function () {
       this.$nextTick(function () {
         this.fetchData(this);
+        console.log('init', this.results);
       })
     },
     methods:{
@@ -48,6 +50,7 @@
     },
     computed: mapState({
       results: function (state) {
+          console.log('map', state.cardData);
         return state.cardData;
       },
       isloadingComplete: function (state) {

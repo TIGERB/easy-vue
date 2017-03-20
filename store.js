@@ -1,5 +1,5 @@
-var Vue  = require('vue'); // get vue
-var Vuex = require('vuex'); // get vuex
+import Vue from 'vue'; // get vue
+import Vuex from 'vuex'; // get vuex
 
 Vue.use(Vuex);
 
