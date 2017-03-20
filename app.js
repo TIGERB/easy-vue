@@ -1,6 +1,6 @@
-require('!style!css!ratchet-npm/dist/css/ratchet.css');// get ratchet
-require('!style!css!font-awesome/css/font-awesome.css');// get font-awesome
-require('!style!css!animate.css/animate.css');// get animate.css
+require('!style-loader!css-loader!ratchet-npm/dist/css/ratchet.css');// get ratchet
+require('!style-loader!css-loader!font-awesome/css/font-awesome.css');// get font-awesome
+require('!style-loader!css-loader!animate.css/animate.css');// get animate.css
 
 var FastClick = require('fastclick');
 FastClick.attach(document.body);// init fastclick
