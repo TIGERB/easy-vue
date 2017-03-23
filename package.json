@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "webpack --progress -d --colors",
+    "dev": "webpack-dev-server --content-base ./",
     "build": "NODE_ENV=production webpack --progress --colors"
   },
   "author": "TIGERB<tigerbcode@gmail.com>",
@@ -44,6 +45,7 @@
     "vue": "^2.0.0",
     "vue-infinite-scroll": "^2.0.0",
     "vue-progressbar": "^0.7.1",
+    "vue-resource": "^1.2.1",
     "vue-router": "^2.0.0",
     "vuex": "^2.0.0",
     "whatwg-fetch": "^2.0.1"

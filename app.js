@@ -10,10 +10,12 @@ import App from './app.vue'; // get root module
 import store from './store.js'; // get vuxe -> store
 
 import VueRouter from 'vue-router'; //get vue-router
+import VueResource from 'vue-resource';// get $http
 import VueProgressBar from 'vue-progressbar'; // get vue-progressbar
 import infiniteScroll from  'vue-infinite-scroll';// get vue-infinite-scroll
 
 Vue.use(VueRouter);
+Vue.use(VueResource);
 var options = {
   color: '#fff',
   failedColor: '#874b4b',

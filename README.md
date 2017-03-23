@@ -14,7 +14,7 @@
 
 ## Learn Vue Easily
 
-> an easy example using Vue2 to implement easy web
+> An easy example using Vue2 to implement easy web
 
 
 ## Dependence
@@ -26,9 +26,10 @@ Webpack            |2.2+
 
 ## Latest Version 0.7.0(2017/03/23)
 - 0.7.0 [2017/03/23]
+  + with a cool logo
   + use webpack2
-  + add logo
-  + use json file to to mock api
+  + use json file to mock api
+  + use vue-resource
 - 0.6.1 [2017/03/06]
   + use yarn
 - 0.6.0 [2016/12/08]
@@ -60,12 +61,9 @@ Webpack            |2.2+
 
 ## How To Use ?
 1. npm install
-2. build:
-  - develop environment:
-  ```
-  DOMAIN=http://yourdomain npm run test
-  ```
-  - production environment:
-  ```
-  DOMAIN=http://yourdomain npm run build
-  ```
+2. build
+  - develop environment: DOMAIN=http://localhost:8080 npm run test
+  - production environment: DOMAIN=http://localhost:8080 npm run build
+3. run
+  - npm run dev
+  - open the website:http://localhost:8080

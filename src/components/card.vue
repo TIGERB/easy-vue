@@ -4,8 +4,8 @@
   infinite-scroll-disabled="busy"
   infinite-scroll-distance="10">
     <p v-for="result in results">
-      <img :src="result.img">
-      <span>{{result.content}}</span>
+      <!-- <img :src="result.img"> -->
+      <span>{{result}}</span>
     </p>
     <div class="nsr-card-loading">
       <nsr-loading
@@ -34,7 +34,6 @@
     mounted: function () {
       this.$nextTick(function () {
         this.fetchData(this);
-        console.log('init', this.results);
       })
     },
     methods:{
@@ -43,6 +42,9 @@
           progress: progress,
           refresh: false
         });
+        console.log('initstate', this.$store.state);
+        console.log('initcard', this.$store.state.cardData);
+        console.log('init', this.results);
       },
       loadMore: function () {
         this.fetchData(this);
@@ -50,7 +52,7 @@
     },
     computed: mapState({
       results: function (state) {
-          console.log('map', state.cardData);
+          console.log('mapState', state.cardData);
         return state.cardData;
       },
       isloadingComplete: function (state) {

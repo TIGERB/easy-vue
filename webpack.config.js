@@ -1,4 +1,5 @@
 var webpack           = require('webpack');
+var path              = require('path');
 var webpackDevServer  = require('webpack-dev-server');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');// separate css
@@ -18,7 +19,7 @@ webpackConfig.entry　 =　{
 };
 
 webpackConfig.output = {
-  path: './dist',
+  path: path.resolve(__dirname, 'dist'),
   publicPath: domain+'/dist/',
   filename: production? '[name].[hash].js': '[name].js'
 };//　output
@@ -31,7 +32,7 @@ webpackConfig.module = {
         use: ExtractTextPlugin.extract({
             fallback: "style-loader",
             use: "css-loader",
-            publicPath: "./dist"
+            publicPath: path.resolve(__dirname, 'dist')
         })
       },
       {
@@ -78,6 +79,11 @@ webpackConfig.plugins = [
     　filename: production? 'app.[hash].css': 'app.css',
     // 　disable: false,
     // 　allChunks: true
+  }),
+  new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: '"production"'
+    }
   })
 ];
 
