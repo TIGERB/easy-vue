@@ -14,10 +14,10 @@
 </template>
 
 <script>
-  var barTop  = require('../components/barTop.vue');
-  var button = require('../components/button.vue');
-  var barBottom  = require('../components/barBottom.vue');
-  var alert  = require('../components/alert.vue');
+  import barTop   from '../components/barTop.vue';
+  import button  from '../components/button.vue';
+  import barBottom   from '../components/barBottom.vue';
+  import alert   from '../components/alert.vue';
 
   module.exports = {
     components:{
