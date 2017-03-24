@@ -58,7 +58,6 @@ var actions = {
          context.commit('addData', json);
       }
       progress.$Progress.finish();
-    //   console.log('store', state.cardData);
     }, response => {
         context.commit('updateBusyState', false);
         progress.$Progress.fail();

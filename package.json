@@ -4,9 +4,9 @@
   "description": "Learn Vue Easily",
   "main": "index.js",
   "scripts": {
-    "test": "webpack --progress -d --colors",
-    "dev": "webpack-dev-server --content-base ./",
-    "build": "NODE_ENV=production webpack --progress --colors"
+    "test": "DOMAIN=http://localhost:8080 webpack --progress -d --colors",
+    "dev": " DOMAIN=http://localhost:8080 webpack-dev-server --content-base ./",
+    "build": "NODE_ENV=production DOMAIN=http://localhost:8080 webpack --progress --colors"
   },
   "author": "TIGERB<tigerbcode@gmail.com>",
   "license": "MIT",

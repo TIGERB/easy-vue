@@ -10,10 +10,10 @@
   module.exports = {
     props:{
       hideLoading:{
-        default: true
+        // default: true
       },
       isEndText:{
-        default: ''
+        // default: ''
       }
     },
   }

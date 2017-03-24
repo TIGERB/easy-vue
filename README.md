@@ -25,7 +25,7 @@ Vuex               |2.0+
 Webpack            |2.2+
 
 ## Latest Version 0.7.0(2017/03/23)
-- 0.7.0 [2017/03/23]
+- 0.7.0 [2017/03/24]
   + with a cool logo
   + use webpack2
   + use json file to mock api
@@ -62,8 +62,8 @@ Webpack            |2.2+
 ## How To Use ?
 1. npm install
 2. build
-  - develop environment: DOMAIN=http://localhost:8080 npm run test
-  - production environment: DOMAIN=http://localhost:8080 npm run build
+  - develop environment: npm run test
+  - production environment: npm run build
 3. run
   - npm run dev
   - open the website:http://localhost:8080

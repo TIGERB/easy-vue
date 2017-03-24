@@ -4,8 +4,8 @@
   infinite-scroll-disabled="busy"
   infinite-scroll-distance="10">
     <p v-for="result in results">
-      <!-- <img :src="result.img"> -->
-      <span>{{result}}</span>
+      <img :src="result.img">
+      <span>{{result.content}}</span>
     </p>
     <div class="nsr-card-loading">
       <nsr-loading
@@ -21,12 +21,7 @@
 
   module.exports = {
     data:function () {
-      return {
-        busy:false,
-        isloadingComplete: false,
-        endText: false,
-        results: []
-      }
+      return {}
     },
     components:{
       'nsr-loading':require('../components/loading.vue'),
@@ -42,9 +37,6 @@
           progress: progress,
           refresh: false
         });
-        console.log('initstate', this.$store.state);
-        console.log('initcard', this.$store.state.cardData);
-        console.log('init', this.results);
       },
       loadMore: function () {
         this.fetchData(this);
@@ -52,7 +44,6 @@
     },
     computed: mapState({
       results: function (state) {
-          console.log('mapState', state.cardData);
         return state.cardData;
       },
       isloadingComplete: function (state) {
