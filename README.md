@@ -1,18 +1,35 @@
+
+<p align="center">
+    <img src="./src/images/logo-3.png" width="360px">
+</p>   
+
 <h1 align="center">Easy Vue</h1>
 
 <p align="center">
 <a href="http://vue.tigerb.cn/#/"><img src="https://img.shields.io/badge/build-passing-brightgreen.svg" alt="Build Status"></a>
-<a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/version-0.6.1-lightgrey.svg" alt="Version"></a>
+<a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/version-0.7.0-lightgrey.svg" alt="Version"></a>
 <a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/download-34.8kb-orange.svg" alt="Downloads"></a>
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
 </p>
 
 ## Learn Vue Easily
 
-> an easy example using Vue2.0 to implement easy web
+> An easy example using Vue2 to implement easy web
 
 
-## Latest Version 0.6.1(2017/03/06)
+## Dependence
+Dependence         |Version
+-------------------|-------
+Vue                |2.0+
+Vuex               |2.0+
+Webpack            |2.2+
+
+## Latest Version 0.7.0(2017/03/23)
+- 0.7.0 [2017/03/24]
+  + with a cool logo
+  + use webpack2
+  + use json file to mock api
+  + use vue-resource
 - 0.6.1 [2017/03/06]
   + use yarn
 - 0.6.0 [2016/12/08]
@@ -36,7 +53,7 @@
   + implements page change
   + optimize UI
 
-> [latest version download](https://github.com/TIGERB/easy-vue/releases/tag/v0.6.1)
+> [latest version download](https://github.com/TIGERB/easy-vue/releases/tag/v0.7.0)
 
 ## Demo
 
@@ -44,7 +61,9 @@
 
 ## How To Use ?
 1. npm install
-2. build:
-  - develop environment: `DOMAIN=http://yourdomain npm run test`
-  - production environment: `DOMAIN=http://yourdomain npm run build`
-3. php environment to use server.php simulate api
+2. build
+  - develop environment: npm run test
+  - production environment: npm run build
+3. run
+  - npm run dev
+  - open the website:http://localhost:8080

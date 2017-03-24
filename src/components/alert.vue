@@ -19,7 +19,7 @@
   	module.exports = {
   		data: function () {
   			return {
-          isShow: false
+                // isShow: false
   			}
   		},
 	    mounted: function () {
