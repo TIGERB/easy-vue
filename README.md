@@ -60,10 +60,7 @@ Webpack            |2.2+
 > <http://vue.tigerb.cn>
 
 ## How To Use ?
-1. npm install
-2. build
-  - develop environment: npm run test
-  - production environment: npm run build
-3. run
-  - npm run dev
-  - open the website:http://localhost:8080
+- yarn install
+- npm run test
+
+Then, open the website:http://localhost:8080
