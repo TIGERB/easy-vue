@@ -4,7 +4,7 @@
   "description": "Learn Vue Easily",
   "main": "index.js",
   "scripts": {
-    "test": "DOMAIN=http://localhost:8080 webpack --progress -d --colors",
+    "test": "DOMAIN=http://localhost:8080 webpack --progress -d --colors && DOMAIN=http://localhost:8080 webpack-dev-server --content-base ./",
     "dev": " DOMAIN=http://localhost:8080 webpack-dev-server --content-base ./",
     "build": "NODE_ENV=production DOMAIN=http://localhost:8080 webpack --progress --colors"
   },
@@ -42,7 +42,6 @@
     "fetch": "^1.0.1",
     "font-awesome": "^4.7.0",
     "ratchet-npm": "^2.0.4",
-    "vue": "^2.0.0",
     "vue-infinite-scroll": "^2.0.0",
     "vue-progressbar": "^0.7.1",
     "vue-resource": "^1.2.1",
