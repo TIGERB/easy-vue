@@ -11,10 +11,10 @@
 </template>
 
 <script>
-  var barTop  = require('../components/barTop.vue');
-  var list = require('../components/list.vue');
-  var barBottom  = require('../components/barBottom.vue');
-  var alert  = require('../components/alert.vue');
+  import barTop  from '../components/barTop.vue';
+  import list from '../components/list.vue';
+  import barBottom  from '../components/barBottom.vue';
+  import alert  from '../components/alert.vue';
 
   module.exports = {
     components:{

@@ -2,10 +2,9 @@
     <ul class="content table-view easy-list" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
         <li class="table-view-cell media" v-for="result in results">
             <router-link class="navigate-right" to="/detail">
-                <img class="media-object pull-left" src="../images/easy-vue.jpg">
+                <img class="media-object pull-left" :src="result.img">
                 <div class="media-body">
                     hello vue
-                    <!-- <p>{{result}}</p> -->
                     <p>a easy example using the vue to implement easy web</p>
                 </div>
             </router-link>
@@ -24,11 +23,7 @@ import {
 
 module.exports = {
     data: function() {
-        return {
-            busy: false,
-            isloadingComplete: false,
-            results: []
-        }
+        return {}
     },
     components: {
         'nsr-loading': require('../components/loading.vue'),
@@ -66,6 +61,5 @@ module.exports = {
 <style>
   .easy-list img{
     width: 42px;
-    height: 42px;
   }
 </style>
