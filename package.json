@@ -6,7 +6,7 @@
   "scripts": {
     "test": "DOMAIN=http://localhost:8080 webpack --progress -d --colors && DOMAIN=http://localhost:8080 webpack-dev-server --content-base ./",
     "dev": " DOMAIN=http://localhost:8080 webpack-dev-server --content-base ./",
-    "build": "NODE_ENV=production DOMAIN=http://localhost:8080 webpack --progress --colors"
+    "build": "NODE_ENV=production webpack --progress --colors"
   },
   "author": "TIGERB<tigerbcode@gmail.com>",
   "license": "MIT",
