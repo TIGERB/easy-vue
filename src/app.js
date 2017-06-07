@@ -31,7 +31,7 @@ var options = {
 Vue.use(VueProgressBar, options);
 Vue.use(infiniteScroll)
 
-var viewPath = './src/views/'; //component src
+var viewPath = './views/'; //component src
 var routes = [
   { path: '/', component: require(viewPath + 'home.vue')},
   { path: '/lists', component: require(viewPath + 'lists.vue')},
