@@ -1,26 +1,23 @@
 var webpack           = require('webpack');
 var path              = require('path');
-var webpackDevServer  = require('webpack-dev-server');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');// separate css
-var CleanPlugin       = require('clean-webpack-plugin');// clean bulid file
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
-var webpackConfig     = module.exports = {};//　init object
+var webpackConfig      = module.exports = {};//　init object
 var production        = process.env.NODE_ENV === 'production';// production environment
-
-var domain            = process.env.DOMAIN; // your domain process.env.domain
 
 // input
 webpackConfig.entry　 =　{
   app:[
     // main
-    './app.js',
+    './src/app.js',
   ],
 };
 
 webpackConfig.output = {
   path: path.resolve(__dirname, 'dist'),
-  publicPath: domain+'/dist/',
+  publicPath: '/',
   filename: production? '[name].[hash].js': '[name].js'
 };//　output
 
@@ -70,9 +67,7 @@ webpackConfig.module = {
 webpackConfig.plugins = [
   // make index.html
   new HtmlWebpackPlugin({
-    title: 'easy-vue',
-    filename: '../index.html',
-    template: './index.template.html'
+    template: './src/index.html'
   }),
   // separate css file
   new ExtractTextPlugin({
@@ -84,13 +79,17 @@ webpackConfig.plugins = [
     'process.env': {
       NODE_ENV: '"production"'
     }
-  })
+  }),
+  new CopyWebpackPlugin([
+    { from: 'src/mock/api.json', to: 'mock' },
+    { context: 'src/images', from: '*', to: path.join(__dirname, 'dist', 'images') }
+  ]),
 ];
 
-/* production plugins need */
-if (production) {
-  webpackConfig.plugins.concat([
-    // clean build file
-    new CleanPlugin('dist')
-    ]);
+if (!production) {
+  webpackConfig.devServer = {
+    contentBase: path.resolve(__dirname, 'dist'),
+    compress: true,
+    historyApiFallback: true,
+  }
 }
