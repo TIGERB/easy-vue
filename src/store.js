@@ -48,7 +48,7 @@ var actions = {
     /**
      * use vue-resource
      */
-    Vue.http.get('../mock/api.json').then(response => {
+    Vue.http.get('/mock/api.json').then(response => {
       var json = response.data;
       context.commit('updateLoadingState', true);
       context.commit('updateBusyState', false);
