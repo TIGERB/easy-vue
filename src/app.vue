@@ -7,7 +7,7 @@
 </template>
 
 <style>
-  [v-cloak] {
-    display: none;
-  }
+[v-cloak] {
+  display: none;
+}
 </style>
