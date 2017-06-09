@@ -10,8 +10,20 @@
   },
   "author": "TIGERB<tigerbcode@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "fastclick": "^1.0.6",
+    "font-awesome": "^4.7.0",
+    "ratchet-npm": "^2.0.4",
+    "vue": "^2.2.6",
+    "vue-infinite-scroll": "^2.0.1",
+    "vue-progressbar": "^0.7.1",
+    "vue-resource": "^1.3.0",
+    "vue-router": "^2.3.1",
+    "vuex": "^2.0.0"
+  },
   "devDependencies": {
-    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-runtime": "^6.4.3",
@@ -28,19 +40,5 @@
     "vue-template-compiler": "^2.2.6",
     "webpack": "^2.3.3",
     "webpack-dev-server": "^2.4.2"
-  },
-  "dependencies": {
-    "animate.css": "^3.5.2",
-    "fastclick": "^1.0.6",
-    "fetch": "^1.0.1",
-    "font-awesome": "^4.7.0",
-    "ratchet-npm": "^2.0.4",
-    "vue": "^2.2.6",
-    "vue-infinite-scroll": "^2.0.1",
-    "vue-progressbar": "^0.7.1",
-    "vue-resource": "^1.3.0",
-    "vue-router": "^2.3.1",
-    "vuex": "^2.0.0",
-    "whatwg-fetch": "^2.0.1"
   }
 }
