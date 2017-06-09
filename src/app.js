@@ -1,20 +1,17 @@
-require('!style-loader!css-loader!ratchet-npm/dist/css/ratchet.css');// get ratchet
-require('!style-loader!css-loader!font-awesome/css/font-awesome.css');// get font-awesome
-require('!style-loader!css-loader!animate.css/animate.css');// get animate.css
+require('!style-loader!css-loader!ratchet-npm/dist/css/ratchet.css'); // get ratchet
+require('!style-loader!css-loader!font-awesome/css/font-awesome.css'); // get font-awesome
+require('!style-loader!css-loader!animate.css/animate.css'); // get animate.css
 
 import FastClick from 'fastclick';
-FastClick.attach(document.body);// init fastclick
-
 import Vue from 'vue'; // get vue
-import App from './app.vue'; // get root module
-import store from './store.js'; // get vuxe -> store
-import router from './router';
-
-import VueResource from 'vue-resource';// get $http
 import VueProgressBar from 'vue-progressbar'; // get vue-progressbar
-import infiniteScroll from  'vue-infinite-scroll';// get vue-infinite-scroll
+import InfiniteScroll from 'vue-infinite-scroll'; // get vue-infinite-scroll
 
-Vue.use(VueResource);
+import App from './app.vue'; // get root module
+import router from './router';
+import store from './store'; // get vuex -> store
+
+FastClick.attach(document.body); // init fastclick
 const options = {
   color: '#fff',
   failedColor: '#874b4b',
@@ -28,11 +25,11 @@ const options = {
   inverse: false
 };
 Vue.use(VueProgressBar, options);
-Vue.use(infiniteScroll);
+Vue.use(InfiniteScroll);
 
-//init
+// init
 const app = new Vue({
-  router: router,
-  store: store,
+  router,
+  store,
   render: h => h(App),
 }).$mount('#app');

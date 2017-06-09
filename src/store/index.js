@@ -12,9 +12,7 @@ const state = {
   isShow: false,
 };
 
-const getters = {
-
-}
+const getters = {};
 
 const mutations = {
   updateLoadingState(state, data) {
@@ -45,28 +43,28 @@ const actions = {
      * use vue-resource
      */
     Vue.http.get('/mock/api.json').then((response) => {
-      var json = response.data;
+      const json = response.data;
       context.commit('updateLoadingState', true);
       context.commit('updateBusyState', false);
       if (isRefresh === true) {
-         context.commit('refreshData', json);
+        context.commit('refreshData', json);
       } else {
-         context.commit('addData', json);
+        context.commit('addData', json);
       }
       progress.$Progress.finish();
     }, () => {
-        context.commit('updateBusyState', false);
-        progress.$Progress.fail();
+      context.commit('updateBusyState', false);
+      progress.$Progress.fail();
     });
 }
 
 };
 
 const store = new Vuex.Store({
-  state: state,
-  getters: getters,
-  mutations: mutations,
-  actions: actions
+ state,
+ getters,
+ mutations,
+ actions,
 });
 
 export default store;
