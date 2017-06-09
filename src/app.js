@@ -16,7 +16,7 @@ import infiniteScroll from  'vue-infinite-scroll';// get vue-infinite-scroll
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
-var options = {
+const options = {
   color: '#fff',
   failedColor: '#874b4b',
   thickness: '3px',
@@ -31,22 +31,20 @@ var options = {
 Vue.use(VueProgressBar, options);
 Vue.use(infiniteScroll)
 
-var viewPath = './views/'; //component src
-var routes = [
+const viewPath = './views/'; //component src
+const routes = [
   { path: '/', component: require(viewPath + 'home.vue')},
   { path: '/lists', component: require(viewPath + 'lists.vue')},
   { path: '/option', component: require(viewPath + 'option.vue')},
   { path: '/detail', component: require(viewPath + 'detail.vue')}
 ];
-var router = new VueRouter({
+const router = new VueRouter({
   routes: routes
 });
 
 //init
-var app = new Vue({
-    router: router,
-    store: store,
-    render: function (h) {
-      return h(App);
-    }
+const app = new Vue({
+  router: router,
+  store: store,
+  render: h => h(App),
 }).$mount('#app');

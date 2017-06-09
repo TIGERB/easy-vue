@@ -7,24 +7,25 @@
 </template>
 
 <script>
-  module.exports = {
-    props:{
-      hideLoading:{
-        // default: true
-      },
-      isEndText:{
-        // default: ''
-      }
+export default {
+  props: {
+    hideLoading: {
+      // default: true
     },
-  }
+    isEndText: {
+      // default: ''
+    }
+  },
+}
 </script>
-<style type="text/css">
-  .nsr-loading-center{
-    text-align:center;
-    margin: 10px auto 10px auto;
-    color: #929292;
-  }
-  .nsr-loading-hiden{
-    display: none;
-  }
+
+<style>
+.nsr-loading-center {
+  text-align: center;
+  margin: 10px auto;
+  color: #929292;
+}
+.nsr-loading-hiden {
+  display: none;
+}
 </style>

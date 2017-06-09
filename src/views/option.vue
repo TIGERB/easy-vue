@@ -14,26 +14,26 @@
 </template>
 
 <script>
-  import barTop   from '../components/barTop.vue';
-  import button  from '../components/button.vue';
-  import barBottom   from '../components/barBottom.vue';
-  import alert   from '../components/alert.vue';
+import barTop from '../components/barTop.vue';
+import button from '../components/button.vue';
+import barBottom from '../components/barBottom.vue';
+import alert from '../components/alert.vue';
 
-  module.exports = {
-    components:{
-      'bar-top':barTop,
-      'option-button':button,
-      'alert':alert,
-      'bar-bottom':barBottom,
-    },
-    methods:{
+export default {
+  components: {
+    'bar-top': barTop,
+    'option-button': button,
+    'alert': alert,
+    'bar-bottom': barBottom,
+  },
+  methods: {
 
-    }
   }
+}
 </script>
 
 <style>
-.pagethree-button{
+.pagethree-button {
   margin-top: 80px;
 }
 </style>
