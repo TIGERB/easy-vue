@@ -8,13 +8,12 @@ FastClick.attach(document.body);// init fastclick
 import Vue from 'vue'; // get vue
 import App from './app.vue'; // get root module
 import store from './store.js'; // get vuxe -> store
+import router from './router';
 
-import VueRouter from 'vue-router'; //get vue-router
 import VueResource from 'vue-resource';// get $http
 import VueProgressBar from 'vue-progressbar'; // get vue-progressbar
 import infiniteScroll from  'vue-infinite-scroll';// get vue-infinite-scroll
 
-Vue.use(VueRouter);
 Vue.use(VueResource);
 const options = {
   color: '#fff',
@@ -29,18 +28,7 @@ const options = {
   inverse: false
 };
 Vue.use(VueProgressBar, options);
-Vue.use(infiniteScroll)
-
-const viewPath = './views/'; //component src
-const routes = [
-  { path: '/', component: require(viewPath + 'home.vue')},
-  { path: '/lists', component: require(viewPath + 'lists.vue')},
-  { path: '/option', component: require(viewPath + 'option.vue')},
-  { path: '/detail', component: require(viewPath + 'detail.vue')}
-];
-const router = new VueRouter({
-  routes: routes
-});
+Vue.use(infiniteScroll);
 
 //init
 const app = new Vue({
