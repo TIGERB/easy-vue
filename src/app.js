@@ -1,6 +1,6 @@
-require('!style-loader!css-loader!ratchet-npm/dist/css/ratchet.css'); // get ratchet
-require('!style-loader!css-loader!font-awesome/css/font-awesome.css'); // get font-awesome
-require('!style-loader!css-loader!animate.css/animate.css'); // get animate.css
+import 'ratchet-npm/dist/css/ratchet.css'; // get ratchet
+import 'font-awesome/css/font-awesome.css'; // get font-awesome
+import 'animate.css/animate.css'; // get animate.css
 
 import FastClick from 'fastclick';
 import Vue from 'vue'; // get vue
