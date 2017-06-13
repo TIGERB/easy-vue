@@ -1,7 +1,7 @@
 
 <p align="center">
     <img src="./src/images/logo-3.png" width="360px">
-</p>   
+</p>
 
 <h1 align="center">Easy Vue</h1>
 
@@ -24,7 +24,10 @@ Vue                |2.0+
 Vuex               |2.0+
 Webpack            |2.2+
 
-## Latest Version 0.7.0(2017/03/23)
+## Latest Version 0.7.1(2017/06/13)
+- 0.7.1 [2017/06/13]
+  + separate router, store and vendor css from app.js
+  + format code style
 - 0.7.0 [2017/03/24]
   + with a cool logo
   + use webpack2
@@ -53,7 +56,7 @@ Webpack            |2.2+
   + implements page change
   + optimize UI
 
-> [latest version download](https://github.com/TIGERB/easy-vue/releases/tag/v0.7.0)
+> [latest version download](https://github.com/TIGERB/easy-vue/releases/tag/v0.7.1)
 
 ## Demo
 
@@ -61,6 +64,5 @@ Webpack            |2.2+
 
 ## How To Use ?
 - yarn install
-- npm run test
-
-Then, open the website:http://localhost:8080
+- for develop: `npm run dev`
+- for build: `npm run build`, and use *lite-server* or *http-server* to server the dist directory
