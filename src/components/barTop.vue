@@ -8,40 +8,40 @@
 </template>
 
 <script>
-  module.exports={
-    props: {
-      showRefeshIcon: {
-        default: true
-      },
-      showReturnIcon: {
-        default: false
-      },
-      showWriteIcon: {
-        default: true
-      },
+export default {
+  props: {
+    showRefeshIcon: {
+      default: true
     },
-    methods:{
-      writeSome:function () {
-        this.$store.commit('isShowAlert', true);
-      },
-      refresh: function () {
-        this.$store.dispatch('getData', {
-          progress: this,
-          refresh: true
-        });
-      },
-      goBack: function () {
-        this.$router.back();
-      }
+    showReturnIcon: {
+      default: false
+    },
+    showWriteIcon: {
+      default: true
+    },
+  },
+  methods:{
+    writeSome: function() {
+      this.$store.commit('isShowAlert', true);
+    },
+    refresh: function() {
+      this.$store.dispatch('getData', {
+        progress: this,
+        refresh: true
+      });
+    },
+    goBack: function() {
+      this.$router.back();
     }
   }
+}
 </script>
 
 <style>
-  .bar-easy-vue{
+  .bar-easy-vue {
     background-color: #1abc9c;
   }
-  .bar-easy-vue a, h1{
+  .bar-easy-vue a, h1 {
     color: #fff !important;
   }
 </style>

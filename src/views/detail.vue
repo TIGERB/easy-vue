@@ -9,18 +9,18 @@
 </template>
 
 <script>
-  import barTop from '../components/barTop.vue';
-  import text from '../components/text.vue';
+import barTop from '../components/barTop.vue';
+import text from '../components/text.vue';
 
-  module.exports = {
-    components:{
-      'bar-top':barTop,
-      'text-content':text,
-    },
-    methods:{
+export default {
+  components: {
+    'bar-top': barTop,
+    'text-content': text,
+  },
+  methods:{
 
-    }
   }
+}
 </script>
 
 <style>

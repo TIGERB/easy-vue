@@ -54,42 +54,32 @@
 </template>
 
 <script>
-    import {mapState} from 'vuex';
+import {mapState} from 'vuex';
 
-  	module.exports = {
-  		data: function () {
-  			return {
-
-  			}
-  		},
-	    mounted: function () {
-				this.$nextTick(function () {
-
-				})
-	    },
-	    methods: {
-          hideAlert: function () {
-
-          }
-	    },
-      computed: mapState({
-
-      }),
-  	}
+export default {
+  data: () => ({}),
+  mounted: function () {
+    this.$nextTick(function() {});
+  },
+  methods: {
+    hideAlert: function() {}
+  },
+  computed: mapState({}),
+}
 </script>
 
 <style>
-.easy-button{
+.easy-button {
   background-color: #eee;
 }
-.easy-button ul{
+.easy-button ul {
   border: none !important;
   margin-top: 100px !important;
 }
-.easy-button span{
+.easy-button span {
   color: #1abc9c;
 }
-.easy-button li{
+.easy-button li {
   border-bottom: 1px solid #eee;
   background: #fff;
 }
