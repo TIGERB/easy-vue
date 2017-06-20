@@ -7,8 +7,8 @@
 
 <p align="center">
 <a href="http://vue.tigerb.cn/#/"><img src="https://img.shields.io/badge/build-passing-brightgreen.svg" alt="Build Status"></a>
-<a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/version-0.7.0-lightgrey.svg" alt="Version"></a>
-<a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/download-34.8kb-orange.svg" alt="Downloads"></a>
+<a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/version-0.7.1-lightgrey.svg" alt="Version"></a>
+<a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/download-400kb-yellow.svg" alt="Downloads"></a>
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
 </p>
 
@@ -22,12 +22,13 @@ Dependence         |Version
 -------------------|-------
 Vue                |2.0+
 Vuex               |2.0+
-Webpack            |2.2+
+Webpack            |3.0+
 
-## Latest Version 0.7.1(2017/06/13)
-- 0.7.1 [2017/06/13]
+## Latest Version 0.7.1(2017/06/20)
+- 0.7.1 [2017/06/20]
   + separate router, store and vendor css from app.js
   + format code style
+  + use webpack 3.0.0
 - 0.7.0 [2017/03/24]
   + with a cool logo
   + use webpack2
@@ -63,6 +64,12 @@ Webpack            |2.2+
 > <http://vue.tigerb.cn>
 
 ## How To Use ?
-- yarn install
-- for develop: `npm run dev`
-- for build: `npm run build`, and use *lite-server* or *http-server* to server the dist directory
+
+```
+step 1: yarn install
+
+step 2:
+    - develop: npm run dev
+    - build  : npm run build, and use *lite-server* or *http-server* to visit the dist directory
+
+```
