@@ -1,6 +1,6 @@
 {
   "name": "easy-vue",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "Learn Vue Easily",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "dev": "npm run clean && webpack-dev-server -d --open --progress",
     "build": "npm run clean && NODE_ENV=production webpack -p --hide-modules --progress"
   },
-  "author": "TIGERB<tigerbcode@gmail.com>",
+  "author": "TIGERB<TIERGB.cn>",
   "license": "MIT",
   "dependencies": {
     "animate.css": "^3.5.2",

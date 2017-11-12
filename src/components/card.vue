@@ -1,12 +1,28 @@
 <template>
-  <div class="content easy-vue-card"
+  <div class="content easy-card-bg"
   v-infinite-scroll="loadMore"
   infinite-scroll-disabled="busy"
   infinite-scroll-distance="10">
-    <p v-for="result in results">
-      <img :src="result.img">
-      <span>{{result.content}}</span>
-    </p>
+    <div class="easy-card" v-for="res in results">
+    <img v-bind:src="res.img" alt="">
+    <p>{{res.content}}</p>
+    <div class="easy-card-user-info">
+      <p>
+        <img v-bind:src="res.avatar" alt="">
+        <span>from</span>{{res.nickname}}
+      </p>
+      <p @click="favourite">
+      <span class="fa"
+      :class="{
+      'fa-heart': isFavourited,
+      'nsr-favourited': isFavourited,
+      'fa-heart-o': isNotFavourited
+      }">
+      </span>
+      {{res.date}}
+      </p>
+    </div>
+  </div>
     <div class="nsr-card-loading">
       <nsr-loading
       :hide-loading="isloadingComplete"
@@ -49,34 +65,74 @@ export default {
 </script>
 
 <style>
-.easy-vue-card {
-  background-color: #f3f3f3 !important;
+.easy-card-bg {
+  background-color:#fafafa !important;
 }
 
-.easy-vue-card p {
-  display: inline-block;
-  margin: 6% 0 0 0;
-  padding: 0;
-  border-bottom: 1px solid #eee;
+.easy-card{
+  margin: 20px 0px 50px 0px;
+  border-top: 1px solid #eeefef;
+  border-bottom: 1px solid #eeefef;
+  border-radius: 0px;
   background-color: #fff;
 }
 
-.easy-vue-card p img {
+.easy-card img{
   width: 100%;
   vertical-align: middle;
 }
 
-.easy-vue-card span {
+.easy-card > p{
+  margin: 10px 10px;
+}
+
+.easy-card-loading{
+  margin-bottom: 90px;
+}
+
+.easy-card-user-info{
+  margin: 8px 10px;
+  overflow: hidden;
+}
+
+
+.easy-card-user-info p{
+  font-size: 14px;
+  margin: 10px 0;
+  color: #777;
+}
+
+.easy-card-user-info p:first-child{
+  float: left;
+}
+
+.easy-card-user-info p:last-child{
+  float: right;
+  font-size: 14px;
+  padding-top: 5px;
+}
+
+.easy-card-user-info p:first-child span{
+  color: #1abc9c;
+  font-size: 12px;
+  padding-right: 2px;
+}
+
+.easy-card-user-info p:last-child span{
+  color: #777;
+  font-size: 14px;
+  padding-right: 3px;
+}
+
+.easy-card-user-info .easy-favourited{
+  color: #1abc9c !important;
+}
+
+.easy-card-user-info img{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   display: inline-block;
-  margin: 0 5%;
-  padding: 10px 0;
-}
-
-.nsr-card-loading {
-  margin: 30px auto 80px auto;
-}
-
-.bar-easy-vue {
-  border: none;
+  vertical-align: middle;
 }
 </style>
