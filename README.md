@@ -10,6 +10,7 @@
 <a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/version-0.7.2-lightgrey.svg" alt="Version"></a>
 <a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/download-400kb-yellow.svg" alt="Downloads"></a>
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+<a href="#backers" alt="sponsors on Open Collective"><img src="https://opencollective.com/easy-vue/backers/badge.svg" /></a> <a href="#sponsors" alt="Sponsors on Open Collective"><img src="https://opencollective.com/easy-vue/sponsors/badge.svg" /></a> 
 </p>
 
 ## Learn Vue Easily
@@ -79,3 +80,33 @@ step 2:
 ## APPRECIATION
 
 <img src="https://raw.githubusercontent.com/TIGERB/easy-tips/master/money-qrcode.jpg" width="300px">
+
+## Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="graphs/contributors"><img src="https://opencollective.com/easy-vue/contributors.svg?width=890&button=false" /></a>
+
+
+## Backers
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/easy-vue#backer)]
+
+<a href="https://opencollective.com/easy-vue#backers" target="_blank"><img src="https://opencollective.com/easy-vue/backers.svg?width=890"></a>
+
+
+## Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/easy-vue#sponsor)]
+
+<a href="https://opencollective.com/easy-vue/sponsor/0/website" target="_blank"><img src="https://opencollective.com/easy-vue/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/easy-vue/sponsor/1/website" target="_blank"><img src="https://opencollective.com/easy-vue/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/easy-vue/sponsor/2/website" target="_blank"><img src="https://opencollective.com/easy-vue/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/easy-vue/sponsor/3/website" target="_blank"><img src="https://opencollective.com/easy-vue/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/easy-vue/sponsor/4/website" target="_blank"><img src="https://opencollective.com/easy-vue/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/easy-vue/sponsor/5/website" target="_blank"><img src="https://opencollective.com/easy-vue/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/easy-vue/sponsor/6/website" target="_blank"><img src="https://opencollective.com/easy-vue/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/easy-vue/sponsor/7/website" target="_blank"><img src="https://opencollective.com/easy-vue/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/easy-vue/sponsor/8/website" target="_blank"><img src="https://opencollective.com/easy-vue/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/easy-vue/sponsor/9/website" target="_blank"><img src="https://opencollective.com/easy-vue/sponsor/9/avatar.svg"></a>
+
+

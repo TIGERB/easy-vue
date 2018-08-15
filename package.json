@@ -6,7 +6,8 @@
   "scripts": {
     "clean": "rm -rf dist",
     "dev": "npm run clean && webpack-dev-server -d --open --progress",
-    "build": "npm run clean && NODE_ENV=production webpack -p --hide-modules --progress"
+    "build": "npm run clean && NODE_ENV=production webpack -p --hide-modules --progress",
+    "postinstall": "opencollective-postinstall"
   },
   "author": "TIGERB<TIERGB.cn>",
   "license": "MIT",
@@ -14,6 +15,7 @@
     "animate.css": "^3.5.2",
     "fastclick": "^1.0.6",
     "font-awesome": "^4.7.0",
+    "opencollective": "^1.0.3",
     "ratchet-npm": "^2.0.4",
     "vue": "^2.2.6",
     "vue-infinite-scroll": "^2.0.1",
@@ -40,5 +42,9 @@
     "vue-template-compiler": "^2.2.6",
     "webpack": "3.0.0",
     "webpack-dev-server": "^2.4.2"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/easy-vue"
   }
 }
