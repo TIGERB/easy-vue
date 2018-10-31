@@ -4,3 +4,4 @@ bower_components
 dist
 npm-debug.log
 # index.html
+yarn-error.log

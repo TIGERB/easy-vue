@@ -6,8 +6,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "dev": "npm run clean && webpack-dev-server -d --open --progress",
-    "build": "npm run clean && NODE_ENV=production webpack -p --hide-modules --progress",
-    "postinstall": "opencollective-postinstall"
+    "build": "npm run clean && NODE_ENV=production webpack -p --hide-modules --progress"
   },
   "author": "TIGERB<TIERGB.cn>",
   "license": "MIT",
