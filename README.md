@@ -24,11 +24,14 @@
 ## Dependence
 Dependence         |Version
 -------------------|-------
-Vue                |2.0+
-Vuex               |2.0+
-Webpack            |3.0+
+Vue                |2.6.10
+Vuex               |3.1.1
+Webpack            |4.32.2
 
-## Latest Version 0.7.2(2017/11/12)
+## Latest Version 0.8.0(2019/05/26)
+- 0.8.0 [2019/05/26]
+  + use webpack 4.32.2
+  + use vue 2.6.10
 - 0.7.2 [2017/11/12]
   + refactor ui for card component
 - 0.7.1 [2017/06/20]
