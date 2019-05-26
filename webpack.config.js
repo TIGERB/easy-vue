@@ -1,8 +1,10 @@
 var webpack = require('webpack');
 var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin'); // separate css
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+var htmlWebpackPlugin = require('html-webpack-plugin');
+// var extractTextPlugin = require('extract-text-webpack-plugin'); // separate css
+var miniCssExtractPlugin = require('mini-css-extract-plugin')
+var copyWebpackPlugin = require('copy-webpack-plugin');
+var vueLoaderPlugin = require('vue-loader/lib/plugin')
 
 var webpackConfig = module.exports = {}; // init object
 var isProduction = process.env.NODE_ENV === 'production'; // production environment
@@ -24,10 +26,10 @@ webpackConfig.module = {
   rules: [
     {
       test: /\.css$/,
-      use: ExtractTextPlugin.extract({
-        fallback: "style-loader",
-        use: "css-loader",
-      }),
+      use: [
+        miniCssExtractPlugin.loader,
+        "css-loader"
+      ],
     },
     {
       test: /\.vue$/,
@@ -52,11 +54,11 @@ webpackConfig.module = {
 
 webpackConfig.plugins = [
   // make index.html
-  new HtmlWebpackPlugin({
+  new htmlWebpackPlugin({
     template: './src/index.html'
   }),
   // separate css file
-  new ExtractTextPlugin({
+  new miniCssExtractPlugin({
     filename: isProduction ? 'app.[hash].css' : 'app.css',
     // disable: false,
     // allChunks: true
@@ -66,10 +68,11 @@ webpackConfig.plugins = [
       NODE_ENV: '"production"'
     }
   }),
-  new CopyWebpackPlugin([
+  new copyWebpackPlugin([
     { from: 'src/mock/api.json', to: 'mock' },
     { context: 'src/images', from: '*', to: path.join(__dirname, 'dist', 'images') }
   ]),
+  new vueLoaderPlugin()
 ];
 
 if (!isProduction) {
