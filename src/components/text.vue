@@ -25,7 +25,7 @@ export default {
   padding-top: 200px;
 }
 .easy-content p:first-child {
-  color: #1abc9c;
+  color: #19caad;
   font-size: 25px;
 }
 .easy-content p:last-child {

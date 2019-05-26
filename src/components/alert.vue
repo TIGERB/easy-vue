@@ -62,7 +62,7 @@ export default {
 .easy-alert > div > p:first-child {
   font-size: 20px;
   line-height: 80px;
-  color: #1abc9c;
+  color: #19caad;
 }
 
 .easy-alert > div > p:last-child {
@@ -70,6 +70,6 @@ export default {
   line-height: 22px;
   padding: 9px 0;
   color: #fff;
-  background-color: #1abc9c;
+  background-color: #19caad;
 }
 </style>
