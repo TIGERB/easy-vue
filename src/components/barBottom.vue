@@ -50,7 +50,7 @@ export default {
 
 <style>
 .easy-bottom-bar {
-  background-color: #1abc9c;
+  background-color: #19caad;
   color: #fff;
   border: none;
 }

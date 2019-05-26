@@ -4,25 +4,26 @@
   infinite-scroll-disabled="busy"
   infinite-scroll-distance="10">
     <div class="easy-card" v-for="res in results">
-    <img v-bind:src="res.img" alt="">
-    <p>{{res.content}}</p>
-    <div class="easy-card-user-info">
-      <p>
-        <img v-bind:src="res.avatar" alt="">
-        <span>from</span>{{res.nickname}}
-      </p>
-      <p @click="favourite">
-      <span class="fa"
-      :class="{
-      'fa-heart': isFavourited,
-      'nsr-favourited': isFavourited,
-      'fa-heart-o': isNotFavourited
-      }">
-      </span>
-      {{res.date}}
-      </p>
+      <img :src="res.img" alt="">
+      <p>{{res.content}}</p>
+      <div class="easy-card-user-info">
+        <p>
+          <img :src="res.avatar" alt="">
+          <span>from</span>{{res.nickname}}
+        </p>
+        <p>
+        <!-- <p @click="favourite"> -->
+        <!-- <span class="fa"
+        :class="{
+        'fa-heart': isFavourited,
+        'nsr-favourited': isFavourited,
+        'fa-heart-o': isNotFavourited
+        }">
+        </span> -->
+        {{res.date}}
+        </p>
+      </div>
     </div>
-  </div>
     <div class="nsr-card-loading">
       <nsr-loading
       :hide-loading="isloadingComplete"
@@ -113,7 +114,7 @@ export default {
 }
 
 .easy-card-user-info p:first-child span{
-  color: #1abc9c;
+  color: #19caad;
   font-size: 12px;
   padding-right: 2px;
 }
@@ -125,7 +126,7 @@ export default {
 }
 
 .easy-card-user-info .easy-favourited{
-  color: #1abc9c !important;
+  color: #19caad !important;
 }
 
 .easy-card-user-info img{

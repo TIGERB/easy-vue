@@ -77,7 +77,7 @@ export default {
   margin-top: 100px !important;
 }
 .easy-button span {
-  color: #1abc9c;
+  color: #19caad;
 }
 .easy-button li {
   border-bottom: 1px solid #eee;

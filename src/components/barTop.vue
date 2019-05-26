@@ -39,7 +39,7 @@ export default {
 
 <style>
   .bar-easy-vue {
-    background-color: #1abc9c;
+    background-color: #19caad;
   }
   .bar-easy-vue a, h1 {
     color: #fff !important;

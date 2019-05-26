@@ -1,5 +1,8 @@
 <template>
-  <ul class="content table-view easy-list" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
+  <ul class="content table-view easy-list" 
+  v-infinite-scroll="loadMore" 
+  infinite-scroll-disabled="busy" 
+  infinite-scroll-distance="10">
     <li class="table-view-cell media" v-for="result in results">
       <router-link class="navigate-right" to="/detail">
         <img class="media-object pull-left" :src="result.img">
@@ -10,7 +13,9 @@
       </router-link>
     </li>
     <div class="nsr-card-loading">
-      <nsr-loading :hide-loading="isloadingComplete" :is-end-text="endText">
+      <nsr-loading 
+      :hide-loading="isloadingComplete" 
+      :is-end-text="endText">
       </nsr-loading>
     </div>
   </ul>

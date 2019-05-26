@@ -7,8 +7,8 @@
 
 <p align="center">
 <a href="http://vue.tigerb.cn/#/"><img src="https://img.shields.io/badge/build-passing-brightgreen.svg" alt="Build Status"></a>
-<a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/version-0.7.2-lightgrey.svg" alt="Version"></a>
-<a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/download-400kb-yellow.svg" alt="Downloads"></a>
+<a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/version-0.8.0-lightgrey.svg" alt="Version"></a>
+<a href="https://github.com/TIGERB/easy-vue/releases"><img src="https://img.shields.io/badge/download-yellow.svg" alt="Downloads"></a>
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
 <a href="#backers" alt="sponsors on Open Collective"><img src="https://opencollective.com/easy-vue/backers/badge.svg" /></a> <a href="#sponsors" alt="Sponsors on Open Collective"><img src="https://opencollective.com/easy-vue/sponsors/badge.svg" /></a> 
 </p>
@@ -24,11 +24,14 @@
 ## Dependence
 Dependence         |Version
 -------------------|-------
-Vue                |2.0+
-Vuex               |2.0+
-Webpack            |3.0+
+Vue                |2.6.10
+Vuex               |3.1.1
+Webpack            |4.32.2
 
-## Latest Version 0.7.2(2017/11/12)
+## Latest Version 0.8.0(2019/05/26)
+- 0.8.0 [2019/05/26]
+  + use webpack 4.32.2
+  + use vue 2.6.10
 - 0.7.2 [2017/11/12]
   + refactor ui for card component
 - 0.7.1 [2017/06/20]
@@ -75,8 +78,8 @@ Webpack            |3.0+
 step 1: yarn install
 
 step 2:
-    - develop: npm run dev
-    - build  : npm run build, and use *lite-server* or *http-server* to visit the dist directory
+    - develop: yarn run dev
+    - build  : yarn run build, and use *lite-server* or *http-server* to visit the dist directory
 
 ```
 
