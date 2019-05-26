@@ -13,7 +13,6 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "babel": "^6.23.0",
-    "fastclick": "^1.0.6",
     "font-awesome": "^4.7.0",
     "mini-css-extract-plugin": "^0.6.0",
     "opencollective": "^1.0.3",
