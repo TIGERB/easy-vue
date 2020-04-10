@@ -1,6 +1,6 @@
-import Vue from "vue"; // get vue
-import Vuex from "vuex"; // get vuex
-import VueResource from "vue-resource"; // get $http
+import Vue from 'vue'; // get vue
+import Vuex from 'vuex'; // get vuex
+import VueResource from 'vue-resource';// get $http
 
 Vue.use(Vuex);
 Vue.use(VueResource);
@@ -34,36 +34,34 @@ const mutations = {
 
 const actions = {
   getData(context, object) {
-    const { progress, isRefresh } = object;
-    const mutationName = isRefresh === true ? "refreshData" : "addData";
+    const {progress, isRefresh} = object;
+	const mutationName = isRefresh === true ? 'refreshData' : 'addData';
     progress.$Progress.start();
-    context.commit("updateLoadingState", false);
-    context.commit("updateBusyState", true);
+    context.commit('updateLoadingState', false);
+    context.commit('updateBusyState', true);
 
     /**
      * use vue-resource
      */
-    Vue.http.get("/mock/api.json").then(
-      (response) => {
-        const json = response.data;
-        context.commit("updateLoadingState", true);
-        context.commit("updateBusyState", false);
-        context.commit(mutationName, json);
-        progress.$Progress.finish();
-      },
-      () => {
-        context.commit("updateBusyState", false);
-        progress.$Progress.fail();
-      }
-    );
-  },
+    Vue.http.get('/mock/api.json').then((response) => {
+      const json = response.data;
+      context.commit('updateLoadingState', true);
+      context.commit('updateBusyState', false);
+      context.commit(mutationName, json);        
+      progress.$Progress.finish();
+    }, () => {
+      context.commit('updateBusyState', false);
+      progress.$Progress.fail();
+    });
+}
+
 };
 
 const store = new Vuex.Store({
-  state,
-  getters,
-  mutations,
-  actions,
+ state,
+ getters,
+ mutations,
+ actions,
 });
 
 export default store;
