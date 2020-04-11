@@ -35,6 +35,7 @@ const mutations = {
 const actions = {
   getData(context, object) {
     const {progress, isRefresh} = object;
+	const mutationName = isRefresh === true ? 'refreshData' : 'addData';
     progress.$Progress.start();
     context.commit('updateLoadingState', false);
     context.commit('updateBusyState', true);
@@ -46,11 +47,7 @@ const actions = {
       const json = response.data;
       context.commit('updateLoadingState', true);
       context.commit('updateBusyState', false);
-      if (isRefresh === true) {
-        context.commit('refreshData', json);
-      } else {
-        context.commit('addData', json);
-      }
+      context.commit(mutationName, json);        
       progress.$Progress.finish();
     }, () => {
       context.commit('updateBusyState', false);
