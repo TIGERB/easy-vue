@@ -18,7 +18,7 @@
 > An easy example using Vue2 to implement easy web
 
 <p align="center">
-	<a href="http://naruto.tigerb.cn/"><img width="30%" src="http://cdn.tigerb.cn/wechat-blog-qrcode.jpg?imageMogr2/thumbnail/260x260!/format/webp/blur/1x0/quality/90|imageslim"></a>
+	<a href="http://naruto.tigerb.cn/"><img width="30%" src="https://blog-1251019962.cos.ap-beijing.myqcloud.com/qiniu_img_2022/wechat-blog-qrcode.jpg"></a>
 <p>
 
 ## Dependence
